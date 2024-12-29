@@ -1,0 +1,72 @@
+services:
+
+  ##################################   ATHENA   ##################################
+
+  elasticsearch:
+    image: elasticsearch:7.16.1
+    volumes:
+      - ./athena/configs/elasticsearch/config.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
+      - ./athena/docker_volumes/elasticsearch/data:/usr/share/elasticsearch/data
+    environment:
+      ES_JAVA_OPTS: "-Xmx512m -Xms512m"
+      ELASTIC_USERNAME: "elastic"
+      ELASTIC_PASSWORD: "KJNESKDL{Qd1d"
+      discovery.type: single-node
+    networks:
+      - elk
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  logstash:
+    image: logstash:7.16.2
+    volumes:
+      - ./athena/configs/logstash/config.yml:/usr/share/logstash/config/logstash.yml:ro
+      - ./athena/configs/logstash/pipelines.yml:/usr/share/logstash/config/pipelines.yml:ro
+      - ./athena/configs/logstash/pipelines:/usr/share/logstash/config/pipelines:ro
+    environment:
+      LS_JAVA_OPTS: "-Xmx512m -Xms512m"
+    ports:
+      - "5044:5044"
+      - "5000:5000"
+      - "9600:9600"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    image: kibana:7.16.1
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./athena/configs/kibana/config.yml:/usr/share/kibana/config/kibana.yml:ro
+    networks:
+      - elk
+    ports:
+      - "5601:5601"
+
+  ##################################   DEMO_APP   ##################################
+
+  demo_app:
+    build:
+      context: ./demo_app
+    image: demo_app
+    volumes:
+      - ./demo_app/app/logs:/app/logs
+
+  # Этот сайдкар должен быть возле нашего приложения, срущего логами
+  beats:
+    image: elastic/filebeat:7.16.2
+    command: filebeat -e -strict.perms=false
+    volumes:
+      - ./demo_app/configs/filebeat/config.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ./demo_app/app/logs:/app/logs:ro
+    networks:
+      - elk
+    depends_on:
+      - demo_app
+
+networks:
+  elk:
+    driver: bridge

@@ -1,2 +1,2 @@
 .idea
-docker_volumes/elasticsearch/data/nodes
+docker_volumes/elasticsearch/data/*
