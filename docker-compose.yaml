@@ -1,6 +1,6 @@
 services:
 
-  ##################################   ATHENA   ##################################
+  #############################   ATHENA (NEW POWERFUL LOG SYSTEM)   #############################
 
   elasticsearch:
     image: elasticsearch:7.16.1
