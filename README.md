@@ -1,1 +1,2 @@
-# Network Efficient eXchange Technologies
+# Network Exchange Technologies
+@ Naming powered by GPT-4 Omni
