@@ -2,11 +2,11 @@ services:
 
   #############################   ATHENA (NEW POWERFUL LOG SYSTEM)   #############################
 
-  elasticsearch:
+  athena_elasticsearch:
     image: elasticsearch:7.16.1
     volumes:
       - ./athena/configs/elasticsearch/config.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
-      - ./athena/docker_volumes/elasticsearch/data:/usr/share/elasticsearch/data
+      - ./athena/mounted/elasticsearch/data:/usr/share/elasticsearch/data
     environment:
       ES_JAVA_OPTS: "-Xmx512m -Xms512m"
       ELASTIC_USERNAME: "elastic"
@@ -18,7 +18,7 @@ services:
       - "9200:9200"
       - "9300:9300"
 
-  logstash:
+  athena_logstash:
     image: logstash:7.16.2
     volumes:
       - ./athena/configs/logstash/config.yml:/usr/share/logstash/config/logstash.yml:ro
@@ -33,12 +33,12 @@ services:
     networks:
       - elk
     depends_on:
-      - elasticsearch
+      - athena_elasticsearch
 
-  kibana:
+  athena_kibana:
     image: kibana:7.16.1
     depends_on:
-      - elasticsearch
+      - athena_elasticsearch
     volumes:
       - ./athena/configs/kibana/config.yml:/usr/share/kibana/config/kibana.yml:ro
     networks:
@@ -46,16 +46,15 @@ services:
     ports:
       - "5601:5601"
 
-  ##################################   DEMO_APP   ##################################
+  ##########################   HERMES (NEW POWERFUL ARBITRAGE SYSTEM)   ##########################
 
-  demo_app:
+  hermes:
     build:
-      context: ./demo_app
-    image: demo_app
+      context: ./hermes
+    image: hermes
     volumes:
       - ./demo_app/app/logs:/app/logs
 
-  # Этот сайдкар должен быть возле нашего приложения, срущего логами
   beats:
     image: elastic/filebeat:7.16.2
     command: filebeat -e -strict.perms=false

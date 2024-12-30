@@ -1,2 +1,5 @@
 .idea
-#docker_volumes/elasticsearch/data/*
+athena/mounted/elasticsearch/data/*
+target
+mounted
+*.iml

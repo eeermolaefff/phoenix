@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_package = "com.pantheon.hermes.grpc";
+
+service Hermes {
+  rpc arbitrate(Graph) returns (Cycle);
+}
+
+message Graph {
+  repeated Edge edge = 1;
+}
+
+message Edge {
+  int32 vertexFrom = 1;
+  int32 vertexTo = 2;
+  float summand = 3;
+  float multiplier = 4;
+}
+
+message Cycle {
+  repeated int32 vertex = 1;
+  int32 responseCode = 2;
+  string responseMessage = 3;
+}
