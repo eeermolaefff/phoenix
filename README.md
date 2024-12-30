@@ -1,2 +1,5 @@
-# Network Exchange Technologies
-@Powered by GPT-4 Omni
+# Пантеон 
+
+#### Мощь богов в твоих руках
+
+###### @Powered by project-STAMBUL
