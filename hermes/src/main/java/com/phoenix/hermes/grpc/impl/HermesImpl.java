@@ -1,13 +1,13 @@
-package com.pantheon.hermes.grpc.impl;
+package com.phoenix.hermes.grpc.impl;
 
-import com.pantheon.hermes.grpc.HermesOuterClass;
+import com.phoenix.common.hermes.grpc.generated.HermesGrpc;
+import com.phoenix.common.hermes.grpc.generated.HermesOuterClass;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 
-import static com.pantheon.hermes.grpc.HermesGrpc.*;
 
 @Slf4j
-public class HermesImpl extends HermesImplBase {
+public class HermesImpl extends HermesGrpc.HermesImplBase {
 
     @Override
     public void arbitrate(

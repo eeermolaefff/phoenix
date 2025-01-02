@@ -1,6 +1,6 @@
-package com.pantheon.hermes.grpc.server;
+package com.phoenix.hermes.grpc.server;
 
-import com.pantheon.hermes.grpc.impl.HermesImpl;
+import com.phoenix.hermes.grpc.impl.HermesImpl;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import lombok.extern.slf4j.Slf4j;

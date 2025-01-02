@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package = "com.pantheon.hermes.grpc";
+option java_package = "com.phoenix.common.hermes.grpc.generated";
 
 service Hermes {
   rpc arbitrate(Graph) returns (Cycle);

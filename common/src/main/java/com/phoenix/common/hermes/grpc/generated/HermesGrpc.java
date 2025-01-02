@@ -1,43 +1,42 @@
-package com.pantheon.hermes.grpc;
+package com.phoenix.common.hermes.grpc.generated;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.57.2)",
+    value = "by gRPC proto compiler (version 1.38.0)",
     comments = "Source: hermes.proto")
-@io.grpc.stub.annotations.GrpcGenerated
 public final class HermesGrpc {
 
   private HermesGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "Hermes";
+  public static final String SERVICE_NAME = "Hermes";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.pantheon.hermes.grpc.HermesOuterClass.Graph,
-      com.pantheon.hermes.grpc.HermesOuterClass.Cycle> getArbitrateMethod;
+  private static volatile io.grpc.MethodDescriptor<com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph,
+      com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle> getArbitrateMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "arbitrate",
-      requestType = com.pantheon.hermes.grpc.HermesOuterClass.Graph.class,
-      responseType = com.pantheon.hermes.grpc.HermesOuterClass.Cycle.class,
+      requestType = com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph.class,
+      responseType = com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.pantheon.hermes.grpc.HermesOuterClass.Graph,
-      com.pantheon.hermes.grpc.HermesOuterClass.Cycle> getArbitrateMethod() {
-    io.grpc.MethodDescriptor<com.pantheon.hermes.grpc.HermesOuterClass.Graph, com.pantheon.hermes.grpc.HermesOuterClass.Cycle> getArbitrateMethod;
+  public static io.grpc.MethodDescriptor<com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph,
+      com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle> getArbitrateMethod() {
+    io.grpc.MethodDescriptor<com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph, com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle> getArbitrateMethod;
     if ((getArbitrateMethod = HermesGrpc.getArbitrateMethod) == null) {
       synchronized (HermesGrpc.class) {
         if ((getArbitrateMethod = HermesGrpc.getArbitrateMethod) == null) {
           HermesGrpc.getArbitrateMethod = getArbitrateMethod =
-              io.grpc.MethodDescriptor.<com.pantheon.hermes.grpc.HermesOuterClass.Graph, com.pantheon.hermes.grpc.HermesOuterClass.Cycle>newBuilder()
+              io.grpc.MethodDescriptor.<com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph, com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "arbitrate"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.pantheon.hermes.grpc.HermesOuterClass.Graph.getDefaultInstance()))
+                  com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.pantheon.hermes.grpc.HermesOuterClass.Cycle.getDefaultInstance()))
+                  com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle.getDefaultInstance()))
               .setSchemaDescriptor(new HermesMethodDescriptorSupplier("arbitrate"))
               .build();
         }
@@ -92,32 +91,31 @@ public final class HermesGrpc {
 
   /**
    */
-  public interface AsyncService {
+  public static abstract class HermesImplBase implements io.grpc.BindableService {
 
     /**
      */
-    default void arbitrate(com.pantheon.hermes.grpc.HermesOuterClass.Graph request,
-        io.grpc.stub.StreamObserver<com.pantheon.hermes.grpc.HermesOuterClass.Cycle> responseObserver) {
+    public void arbitrate(com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph request,
+        io.grpc.stub.StreamObserver<com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArbitrateMethod(), responseObserver);
     }
-  }
-
-  /**
-   * Base class for the server implementation of the service Hermes.
-   */
-  public static abstract class HermesImplBase
-      implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return HermesGrpc.bindService(this);
+      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+          .addMethod(
+            getArbitrateMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph,
+                com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle>(
+                  this, METHODID_ARBITRATE)))
+          .build();
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service Hermes.
    */
-  public static final class HermesStub
-      extends io.grpc.stub.AbstractAsyncStub<HermesStub> {
+  public static final class HermesStub extends io.grpc.stub.AbstractAsyncStub<HermesStub> {
     private HermesStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -131,18 +129,16 @@ public final class HermesGrpc {
 
     /**
      */
-    public void arbitrate(com.pantheon.hermes.grpc.HermesOuterClass.Graph request,
-        io.grpc.stub.StreamObserver<com.pantheon.hermes.grpc.HermesOuterClass.Cycle> responseObserver) {
+    public void arbitrate(com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph request,
+        io.grpc.stub.StreamObserver<com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getArbitrateMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service Hermes.
    */
-  public static final class HermesBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<HermesBlockingStub> {
+  public static final class HermesBlockingStub extends io.grpc.stub.AbstractBlockingStub<HermesBlockingStub> {
     private HermesBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -156,17 +152,15 @@ public final class HermesGrpc {
 
     /**
      */
-    public com.pantheon.hermes.grpc.HermesOuterClass.Cycle arbitrate(com.pantheon.hermes.grpc.HermesOuterClass.Graph request) {
+    public com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle arbitrate(com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getArbitrateMethod(), getCallOptions(), request);
     }
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service Hermes.
    */
-  public static final class HermesFutureStub
-      extends io.grpc.stub.AbstractFutureStub<HermesFutureStub> {
+  public static final class HermesFutureStub extends io.grpc.stub.AbstractFutureStub<HermesFutureStub> {
     private HermesFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -180,8 +174,8 @@ public final class HermesGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.pantheon.hermes.grpc.HermesOuterClass.Cycle> arbitrate(
-        com.pantheon.hermes.grpc.HermesOuterClass.Graph request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle> arbitrate(
+        com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getArbitrateMethod(), getCallOptions()), request);
     }
@@ -194,10 +188,10 @@ public final class HermesGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AsyncService serviceImpl;
+    private final HermesImplBase serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AsyncService serviceImpl, int methodId) {
+    MethodHandlers(HermesImplBase serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -207,8 +201,8 @@ public final class HermesGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_ARBITRATE:
-          serviceImpl.arbitrate((com.pantheon.hermes.grpc.HermesOuterClass.Graph) request,
-              (io.grpc.stub.StreamObserver<com.pantheon.hermes.grpc.HermesOuterClass.Cycle>) responseObserver);
+          serviceImpl.arbitrate((com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Graph) request,
+              (io.grpc.stub.StreamObserver<com.phoenix.common.hermes.grpc.generated.HermesOuterClass.Cycle>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -226,25 +220,13 @@ public final class HermesGrpc {
     }
   }
 
-  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
-    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-        .addMethod(
-          getArbitrateMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.pantheon.hermes.grpc.HermesOuterClass.Graph,
-              com.pantheon.hermes.grpc.HermesOuterClass.Cycle>(
-                service, METHODID_ARBITRATE)))
-        .build();
-  }
-
   private static abstract class HermesBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     HermesBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.pantheon.hermes.grpc.HermesOuterClass.getDescriptor();
+      return com.phoenix.common.hermes.grpc.generated.HermesOuterClass.getDescriptor();
     }
 
     @java.lang.Override
@@ -261,9 +243,9 @@ public final class HermesGrpc {
   private static final class HermesMethodDescriptorSupplier
       extends HermesBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final java.lang.String methodName;
+    private final String methodName;
 
-    HermesMethodDescriptorSupplier(java.lang.String methodName) {
+    HermesMethodDescriptorSupplier(String methodName) {
       this.methodName = methodName;
     }
 

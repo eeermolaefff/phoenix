@@ -1,5 +1,7 @@
 .idea
-athena/mounted/elasticsearch/data/*
 target
 mounted
+!athena/mounted/
+athena/mounted/elasticsearch/data/nodes
 *.iml
+dependency-reduced-pom.xml

@@ -1,8 +1,17 @@
 services:
 
-  #############################   ATHENA (NEW POWERFUL LOG SYSTEM)   #############################
+  ##########################   BUILD COMMON LIBRARY   ##########################
 
-  athena_elasticsearch:
+  common:
+    image: common
+    build:
+      context: ./common
+    volumes:
+      - common_data:/common
+
+  ##########################   ATHENA (NEW POWERFUL LOG SYSTEM)   ##########################
+
+  athena-elasticsearch:
     image: elasticsearch:7.16.1
     volumes:
       - ./athena/configs/elasticsearch/config.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
@@ -18,7 +27,7 @@ services:
       - "9200:9200"
       - "9300:9300"
 
-  athena_logstash:
+  athena-logstash:
     image: logstash:7.16.2
     volumes:
       - ./athena/configs/logstash/config.yml:/usr/share/logstash/config/logstash.yml:ro
@@ -26,45 +35,53 @@ services:
       - ./athena/configs/logstash/pipelines:/usr/share/logstash/config/pipelines:ro
     environment:
       LS_JAVA_OPTS: "-Xmx512m -Xms512m"
+    networks:
+      - elk
     ports:
       - "5044:5044"
       - "5000:5000"
       - "9600:9600"
-    networks:
-      - elk
     depends_on:
-      - athena_elasticsearch
+      - athena-elasticsearch
 
-  athena_kibana:
+  athena-kibana:
     image: kibana:7.16.1
-    depends_on:
-      - athena_elasticsearch
     volumes:
       - ./athena/configs/kibana/config.yml:/usr/share/kibana/config/kibana.yml:ro
     networks:
       - elk
     ports:
       - "5601:5601"
+    depends_on:
+      - athena-elasticsearch
 
   ##########################   HERMES (NEW POWERFUL ARBITRAGE SYSTEM)   ##########################
 
   hermes:
+    image: hermes
     build:
       context: ./hermes
-    image: hermes
     volumes:
-      - ./demo_app/app/logs:/app/logs
+      - ./hermes/mounted/logs:/home/app/mounted/logs
+      - common_data:/common
+    ports:
+      - "9090:9090"
+    depends_on:
+      - common
 
-  beats:
+  hermes-filebeat:
     image: elastic/filebeat:7.16.2
     command: filebeat -e -strict.perms=false
     volumes:
-      - ./demo_app/configs/filebeat/config.yml:/usr/share/filebeat/filebeat.yml:ro
-      - ./demo_app/app/logs:/app/logs:ro
+      - ./hermes/configs/filebeat/config.yml:/usr/share/filebeat/filebeat.yml:ro
+      - ./hermes/mounted/logs:/app/logs:ro
     networks:
       - elk
     depends_on:
-      - demo_app
+      - athena-elasticsearch
+
+volumes:
+  common_data:
 
 networks:
   elk:
