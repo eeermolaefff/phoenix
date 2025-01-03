@@ -3,7 +3,7 @@ filebeat.inputs:
     enabled: true
     # Я запущу filebeat в докере и проброшу логи приложения по данному пути
     paths:
-      - /app/logs/hermes.log
+      - /app/logs/app.log
     # В fields мы можем указать дополнительные поля, а затем в logstash вытаскивать их
     # и делать какую-нибудь дополнительную работу с логами
     fields:

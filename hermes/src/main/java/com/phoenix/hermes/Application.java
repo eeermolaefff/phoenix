@@ -20,8 +20,8 @@ public class Application {
 //        server.awaitTermination();
 
         while (true) {
-            log.info("I'm alive!");
-            Thread.sleep(1000);
+            log.info("\"{}\"", "I'm alive!");
+            Thread.sleep(5000);
         }
     }
 }
