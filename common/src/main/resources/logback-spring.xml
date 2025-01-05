@@ -1,0 +1,57 @@
+<configuration>
+
+    <!-- Console Logs Appender -->
+    <appender name="CONSOLE_LOGS" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="com.phoenix.common.logging.layouts.LogsJsonLayout">
+            <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+                <prettyPrint>true</prettyPrint>
+            </jsonFormatter>
+        </layout>
+    </appender>
+
+    <!-- File Logs Appender with Daily Rolling Policy -->
+    <appender name="FILE_LOGS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./mounted/logs/app.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>./mounted/logs/app.log.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+        <layout class="com.phoenix.common.logging.layouts.LogsJsonLayout">
+            <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+                <prettyPrint>false</prettyPrint>
+            </jsonFormatter>
+        </layout>
+    </appender>
+
+    <!-- Console Metrics Appender -->
+    <appender name="CONSOLE_METRICS" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="com.phoenix.common.logging.layouts.MetricsJsonLayout">
+            <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+                <prettyPrint>true</prettyPrint>
+            </jsonFormatter>
+        </layout>
+    </appender>
+
+    <!-- File Appender with Daily Rolling Policy -->
+    <appender name="FILE_METRICS" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>./mounted/logs/app.metric</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Daily rollover -->
+            <fileNamePattern>./mounted/logs/app.metric.%d{yyyy-MM-dd}</fileNamePattern>
+        </rollingPolicy>
+        <layout class="com.phoenix.common.logging.layouts.MetricsJsonLayout">
+            <jsonFormatter class="ch.qos.logback.contrib.jackson.JacksonJsonFormatter">
+                <prettyPrint>false</prettyPrint>
+            </jsonFormatter>
+        </layout>
+    </appender>
+
+    <!-- Root logger configuration -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE_LOGS" />
+        <appender-ref ref="FILE_LOGS" />
+    </root>
+    <logger name="MetricsLogger" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE_METRICS" />
+        <appender-ref ref="FILE_METRICS" />
+    </logger>
+</configuration>

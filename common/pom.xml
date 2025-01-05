@@ -8,21 +8,70 @@
     <packaging>jar</packaging>
     <version>alpha</version>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.4</version>
+    </parent>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
 
-        <grpcSpringBootStarterVersion>5.1.5</grpcSpringBootStarterVersion>
         <javaxAnnotationApiVersion>1.3.2</javaxAnnotationApiVersion>
+        <lombokVersion>1.18.36</lombokVersion>
+        <springBootStarterGrpcVersion>3.1.0.RELEASE</springBootStarterGrpcVersion>
+        <springBootVersion>3.2.4</springBootVersion>
+        <springVersion>6.1.5</springVersion>
+        <aspectjVersion>1.9.20.1</aspectjVersion>
+        <jacksonVersion>2.15.2</jacksonVersion>
+        <logbackClassicVersion>1.4.8</logbackClassicVersion>
+        <logbackJsonClassicVersion>0.1.5</logbackJsonClassicVersion>
     </properties>
 
     <dependencies>
 
         <dependency>
-            <groupId>io.github.lognet</groupId>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logbackClassicVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback.contrib</groupId>
+            <artifactId>logback-json-classic</artifactId>
+            <version>${logbackJsonClassicVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback.contrib</groupId>
+            <artifactId>logback-jackson</artifactId>
+            <version>${logbackJsonClassicVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jacksonVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>${springBootVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.devh</groupId>
             <artifactId>grpc-spring-boot-starter</artifactId>
-            <version>${grpcSpringBootStarterVersion}</version>
+            <version>${springBootStarterGrpcVersion}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombokVersion}</version>
         </dependency>
 
         <dependency>

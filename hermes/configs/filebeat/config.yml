@@ -1,15 +1,18 @@
 filebeat.inputs:
   - type: log
     enabled: true
-    # Я запущу filebeat в докере и проброшу логи приложения по данному пути
     paths:
       - /app/logs/app.log
-    # В fields мы можем указать дополнительные поля, а затем в logstash вытаскивать их
-    # и делать какую-нибудь дополнительную работу с логами
     fields:
-      # Название нашего сервиса
-      service: hermes
+      service: hermes_logs
+
+  - type: log
+    enabled: true
+    paths:
+      - /app/logs/app.metric
+    fields:
+      service: hermes_metrics
 
 output.logstash:
-  # Будьте внимательны при запуске вне докера и вместо logstash укажите правильный адрес хоста с logstash.
+  # При запуске вне докера вместо athena-logstash нужно указать правильный адрес хоста.
   hosts: ["athena-logstash:5044"]

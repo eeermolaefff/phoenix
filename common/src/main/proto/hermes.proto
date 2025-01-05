@@ -1,9 +1,9 @@
 syntax = "proto3";
 
-option java_package = "com.phoenix.common.hermes.grpc.generated";
+option java_package = "com.phoenix.common.grpc.hermes.generated";
 
 service Hermes {
-  rpc arbitrate(Graph) returns (Cycle);
+  rpc arbitrate(Graph) returns (Cycles);
 }
 
 message Graph {
@@ -13,12 +13,13 @@ message Graph {
 message Edge {
   int32 vertexFrom = 1;
   int32 vertexTo = 2;
-  float summand = 3;
-  float multiplier = 4;
+  float multiplier = 3;
 }
 
 message Cycle {
   repeated int32 vertex = 1;
-  int32 responseCode = 2;
-  string responseMessage = 3;
+}
+
+message Cycles {
+  repeated Cycle cycle = 1;
 }
