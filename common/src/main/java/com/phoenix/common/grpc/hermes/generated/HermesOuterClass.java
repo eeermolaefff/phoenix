@@ -14,33 +14,2383 @@ public final class HermesOuterClass {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface HermesArbitrageRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:HermesArbitrageRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.Graph graph = 1;</code>
+     * @return Whether the graph field is set.
+     */
+    boolean hasGraph();
+    /**
+     * <code>.Graph graph = 1;</code>
+     * @return The graph.
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph getGraph();
+    /**
+     * <code>.Graph graph = 1;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.GraphOrBuilder getGraphOrBuilder();
+
+    /**
+     * <code>.StartVertices startVertices = 2;</code>
+     * @return Whether the startVertices field is set.
+     */
+    boolean hasStartVertices();
+    /**
+     * <code>.StartVertices startVertices = 2;</code>
+     * @return The startVertices.
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices getStartVertices();
+    /**
+     * <code>.StartVertices startVertices = 2;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVerticesOrBuilder getStartVerticesOrBuilder();
+
+    /**
+     * <code>.SearchParams searchParams = 3;</code>
+     * @return Whether the searchParams field is set.
+     */
+    boolean hasSearchParams();
+    /**
+     * <code>.SearchParams searchParams = 3;</code>
+     * @return The searchParams.
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams getSearchParams();
+    /**
+     * <code>.SearchParams searchParams = 3;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParamsOrBuilder getSearchParamsOrBuilder();
+  }
+  /**
+   * Protobuf type {@code HermesArbitrageRequest}
+   */
+  public static final class HermesArbitrageRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:HermesArbitrageRequest)
+      HermesArbitrageRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HermesArbitrageRequest.newBuilder() to construct.
+    private HermesArbitrageRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HermesArbitrageRequest() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HermesArbitrageRequest();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HermesArbitrageRequest(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.Builder subBuilder = null;
+              if (graph_ != null) {
+                subBuilder = graph_.toBuilder();
+              }
+              graph_ = input.readMessage(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(graph_);
+                graph_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.Builder subBuilder = null;
+              if (startVertices_ != null) {
+                subBuilder = startVertices_.toBuilder();
+              }
+              startVertices_ = input.readMessage(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(startVertices_);
+                startVertices_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.Builder subBuilder = null;
+              if (searchParams_ != null) {
+                subBuilder = searchParams_.toBuilder();
+              }
+              searchParams_ = input.readMessage(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(searchParams_);
+                searchParams_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest.Builder.class);
+    }
+
+    public static final int GRAPH_FIELD_NUMBER = 1;
+    private com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph graph_;
+    /**
+     * <code>.Graph graph = 1;</code>
+     * @return Whether the graph field is set.
+     */
+    @java.lang.Override
+    public boolean hasGraph() {
+      return graph_ != null;
+    }
+    /**
+     * <code>.Graph graph = 1;</code>
+     * @return The graph.
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph getGraph() {
+      return graph_ == null ? com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.getDefaultInstance() : graph_;
+    }
+    /**
+     * <code>.Graph graph = 1;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.GraphOrBuilder getGraphOrBuilder() {
+      return getGraph();
+    }
+
+    public static final int STARTVERTICES_FIELD_NUMBER = 2;
+    private com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices startVertices_;
+    /**
+     * <code>.StartVertices startVertices = 2;</code>
+     * @return Whether the startVertices field is set.
+     */
+    @java.lang.Override
+    public boolean hasStartVertices() {
+      return startVertices_ != null;
+    }
+    /**
+     * <code>.StartVertices startVertices = 2;</code>
+     * @return The startVertices.
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices getStartVertices() {
+      return startVertices_ == null ? com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.getDefaultInstance() : startVertices_;
+    }
+    /**
+     * <code>.StartVertices startVertices = 2;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVerticesOrBuilder getStartVerticesOrBuilder() {
+      return getStartVertices();
+    }
+
+    public static final int SEARCHPARAMS_FIELD_NUMBER = 3;
+    private com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams searchParams_;
+    /**
+     * <code>.SearchParams searchParams = 3;</code>
+     * @return Whether the searchParams field is set.
+     */
+    @java.lang.Override
+    public boolean hasSearchParams() {
+      return searchParams_ != null;
+    }
+    /**
+     * <code>.SearchParams searchParams = 3;</code>
+     * @return The searchParams.
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams getSearchParams() {
+      return searchParams_ == null ? com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.getDefaultInstance() : searchParams_;
+    }
+    /**
+     * <code>.SearchParams searchParams = 3;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParamsOrBuilder getSearchParamsOrBuilder() {
+      return getSearchParams();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (graph_ != null) {
+        output.writeMessage(1, getGraph());
+      }
+      if (startVertices_ != null) {
+        output.writeMessage(2, getStartVertices());
+      }
+      if (searchParams_ != null) {
+        output.writeMessage(3, getSearchParams());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (graph_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getGraph());
+      }
+      if (startVertices_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getStartVertices());
+      }
+      if (searchParams_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getSearchParams());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest)) {
+        return super.equals(obj);
+      }
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest other = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest) obj;
+
+      if (hasGraph() != other.hasGraph()) return false;
+      if (hasGraph()) {
+        if (!getGraph()
+            .equals(other.getGraph())) return false;
+      }
+      if (hasStartVertices() != other.hasStartVertices()) return false;
+      if (hasStartVertices()) {
+        if (!getStartVertices()
+            .equals(other.getStartVertices())) return false;
+      }
+      if (hasSearchParams() != other.hasSearchParams()) return false;
+      if (hasSearchParams()) {
+        if (!getSearchParams()
+            .equals(other.getSearchParams())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasGraph()) {
+        hash = (37 * hash) + GRAPH_FIELD_NUMBER;
+        hash = (53 * hash) + getGraph().hashCode();
+      }
+      if (hasStartVertices()) {
+        hash = (37 * hash) + STARTVERTICES_FIELD_NUMBER;
+        hash = (53 * hash) + getStartVertices().hashCode();
+      }
+      if (hasSearchParams()) {
+        hash = (37 * hash) + SEARCHPARAMS_FIELD_NUMBER;
+        hash = (53 * hash) + getSearchParams().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code HermesArbitrageRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:HermesArbitrageRequest)
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest.Builder.class);
+      }
+
+      // Construct using com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (graphBuilder_ == null) {
+          graph_ = null;
+        } else {
+          graph_ = null;
+          graphBuilder_ = null;
+        }
+        if (startVerticesBuilder_ == null) {
+          startVertices_ = null;
+        } else {
+          startVertices_ = null;
+          startVerticesBuilder_ = null;
+        }
+        if (searchParamsBuilder_ == null) {
+          searchParams_ = null;
+        } else {
+          searchParams_ = null;
+          searchParamsBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest getDefaultInstanceForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest build() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest buildPartial() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest result = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest(this);
+        if (graphBuilder_ == null) {
+          result.graph_ = graph_;
+        } else {
+          result.graph_ = graphBuilder_.build();
+        }
+        if (startVerticesBuilder_ == null) {
+          result.startVertices_ = startVertices_;
+        } else {
+          result.startVertices_ = startVerticesBuilder_.build();
+        }
+        if (searchParamsBuilder_ == null) {
+          result.searchParams_ = searchParams_;
+        } else {
+          result.searchParams_ = searchParamsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest) {
+          return mergeFrom((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest other) {
+        if (other == com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest.getDefaultInstance()) return this;
+        if (other.hasGraph()) {
+          mergeGraph(other.getGraph());
+        }
+        if (other.hasStartVertices()) {
+          mergeStartVertices(other.getStartVertices());
+        }
+        if (other.hasSearchParams()) {
+          mergeSearchParams(other.getSearchParams());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph graph_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.GraphOrBuilder> graphBuilder_;
+      /**
+       * <code>.Graph graph = 1;</code>
+       * @return Whether the graph field is set.
+       */
+      public boolean hasGraph() {
+        return graphBuilder_ != null || graph_ != null;
+      }
+      /**
+       * <code>.Graph graph = 1;</code>
+       * @return The graph.
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph getGraph() {
+        if (graphBuilder_ == null) {
+          return graph_ == null ? com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.getDefaultInstance() : graph_;
+        } else {
+          return graphBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.Graph graph = 1;</code>
+       */
+      public Builder setGraph(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph value) {
+        if (graphBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          graph_ = value;
+          onChanged();
+        } else {
+          graphBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Graph graph = 1;</code>
+       */
+      public Builder setGraph(
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.Builder builderForValue) {
+        if (graphBuilder_ == null) {
+          graph_ = builderForValue.build();
+          onChanged();
+        } else {
+          graphBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Graph graph = 1;</code>
+       */
+      public Builder mergeGraph(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph value) {
+        if (graphBuilder_ == null) {
+          if (graph_ != null) {
+            graph_ =
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.newBuilder(graph_).mergeFrom(value).buildPartial();
+          } else {
+            graph_ = value;
+          }
+          onChanged();
+        } else {
+          graphBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Graph graph = 1;</code>
+       */
+      public Builder clearGraph() {
+        if (graphBuilder_ == null) {
+          graph_ = null;
+          onChanged();
+        } else {
+          graph_ = null;
+          graphBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.Graph graph = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.Builder getGraphBuilder() {
+        
+        onChanged();
+        return getGraphFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.Graph graph = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.GraphOrBuilder getGraphOrBuilder() {
+        if (graphBuilder_ != null) {
+          return graphBuilder_.getMessageOrBuilder();
+        } else {
+          return graph_ == null ?
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.getDefaultInstance() : graph_;
+        }
+      }
+      /**
+       * <code>.Graph graph = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.GraphOrBuilder> 
+          getGraphFieldBuilder() {
+        if (graphBuilder_ == null) {
+          graphBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.GraphOrBuilder>(
+                  getGraph(),
+                  getParentForChildren(),
+                  isClean());
+          graph_ = null;
+        }
+        return graphBuilder_;
+      }
+
+      private com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices startVertices_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVerticesOrBuilder> startVerticesBuilder_;
+      /**
+       * <code>.StartVertices startVertices = 2;</code>
+       * @return Whether the startVertices field is set.
+       */
+      public boolean hasStartVertices() {
+        return startVerticesBuilder_ != null || startVertices_ != null;
+      }
+      /**
+       * <code>.StartVertices startVertices = 2;</code>
+       * @return The startVertices.
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices getStartVertices() {
+        if (startVerticesBuilder_ == null) {
+          return startVertices_ == null ? com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.getDefaultInstance() : startVertices_;
+        } else {
+          return startVerticesBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.StartVertices startVertices = 2;</code>
+       */
+      public Builder setStartVertices(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices value) {
+        if (startVerticesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          startVertices_ = value;
+          onChanged();
+        } else {
+          startVerticesBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.StartVertices startVertices = 2;</code>
+       */
+      public Builder setStartVertices(
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.Builder builderForValue) {
+        if (startVerticesBuilder_ == null) {
+          startVertices_ = builderForValue.build();
+          onChanged();
+        } else {
+          startVerticesBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.StartVertices startVertices = 2;</code>
+       */
+      public Builder mergeStartVertices(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices value) {
+        if (startVerticesBuilder_ == null) {
+          if (startVertices_ != null) {
+            startVertices_ =
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.newBuilder(startVertices_).mergeFrom(value).buildPartial();
+          } else {
+            startVertices_ = value;
+          }
+          onChanged();
+        } else {
+          startVerticesBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.StartVertices startVertices = 2;</code>
+       */
+      public Builder clearStartVertices() {
+        if (startVerticesBuilder_ == null) {
+          startVertices_ = null;
+          onChanged();
+        } else {
+          startVertices_ = null;
+          startVerticesBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.StartVertices startVertices = 2;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.Builder getStartVerticesBuilder() {
+        
+        onChanged();
+        return getStartVerticesFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.StartVertices startVertices = 2;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVerticesOrBuilder getStartVerticesOrBuilder() {
+        if (startVerticesBuilder_ != null) {
+          return startVerticesBuilder_.getMessageOrBuilder();
+        } else {
+          return startVertices_ == null ?
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.getDefaultInstance() : startVertices_;
+        }
+      }
+      /**
+       * <code>.StartVertices startVertices = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVerticesOrBuilder> 
+          getStartVerticesFieldBuilder() {
+        if (startVerticesBuilder_ == null) {
+          startVerticesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVerticesOrBuilder>(
+                  getStartVertices(),
+                  getParentForChildren(),
+                  isClean());
+          startVertices_ = null;
+        }
+        return startVerticesBuilder_;
+      }
+
+      private com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams searchParams_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParamsOrBuilder> searchParamsBuilder_;
+      /**
+       * <code>.SearchParams searchParams = 3;</code>
+       * @return Whether the searchParams field is set.
+       */
+      public boolean hasSearchParams() {
+        return searchParamsBuilder_ != null || searchParams_ != null;
+      }
+      /**
+       * <code>.SearchParams searchParams = 3;</code>
+       * @return The searchParams.
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams getSearchParams() {
+        if (searchParamsBuilder_ == null) {
+          return searchParams_ == null ? com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.getDefaultInstance() : searchParams_;
+        } else {
+          return searchParamsBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.SearchParams searchParams = 3;</code>
+       */
+      public Builder setSearchParams(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams value) {
+        if (searchParamsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          searchParams_ = value;
+          onChanged();
+        } else {
+          searchParamsBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.SearchParams searchParams = 3;</code>
+       */
+      public Builder setSearchParams(
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.Builder builderForValue) {
+        if (searchParamsBuilder_ == null) {
+          searchParams_ = builderForValue.build();
+          onChanged();
+        } else {
+          searchParamsBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.SearchParams searchParams = 3;</code>
+       */
+      public Builder mergeSearchParams(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams value) {
+        if (searchParamsBuilder_ == null) {
+          if (searchParams_ != null) {
+            searchParams_ =
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.newBuilder(searchParams_).mergeFrom(value).buildPartial();
+          } else {
+            searchParams_ = value;
+          }
+          onChanged();
+        } else {
+          searchParamsBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.SearchParams searchParams = 3;</code>
+       */
+      public Builder clearSearchParams() {
+        if (searchParamsBuilder_ == null) {
+          searchParams_ = null;
+          onChanged();
+        } else {
+          searchParams_ = null;
+          searchParamsBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.SearchParams searchParams = 3;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.Builder getSearchParamsBuilder() {
+        
+        onChanged();
+        return getSearchParamsFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.SearchParams searchParams = 3;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParamsOrBuilder getSearchParamsOrBuilder() {
+        if (searchParamsBuilder_ != null) {
+          return searchParamsBuilder_.getMessageOrBuilder();
+        } else {
+          return searchParams_ == null ?
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.getDefaultInstance() : searchParams_;
+        }
+      }
+      /**
+       * <code>.SearchParams searchParams = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParamsOrBuilder> 
+          getSearchParamsFieldBuilder() {
+        if (searchParamsBuilder_ == null) {
+          searchParamsBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParamsOrBuilder>(
+                  getSearchParams(),
+                  getParentForChildren(),
+                  isClean());
+          searchParams_ = null;
+        }
+        return searchParamsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:HermesArbitrageRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:HermesArbitrageRequest)
+    private static final com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest();
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HermesArbitrageRequest>
+        PARSER = new com.google.protobuf.AbstractParser<HermesArbitrageRequest>() {
+      @java.lang.Override
+      public HermesArbitrageRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HermesArbitrageRequest(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HermesArbitrageRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HermesArbitrageRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface SearchParamsOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:SearchParams)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>float minProfitAsPercent = 1;</code>
+     * @return The minProfitAsPercent.
+     */
+    float getMinProfitAsPercent();
+
+    /**
+     * <code>float maxProfitAsPercent = 2;</code>
+     * @return The maxProfitAsPercent.
+     */
+    float getMaxProfitAsPercent();
+
+    /**
+     * <code>int32 componentMinSize = 3;</code>
+     * @return The componentMinSize.
+     */
+    int getComponentMinSize();
+
+    /**
+     * <code>int32 numberOfRandomLaunches = 4;</code>
+     * @return The numberOfRandomLaunches.
+     */
+    int getNumberOfRandomLaunches();
+  }
+  /**
+   * Protobuf type {@code SearchParams}
+   */
+  public static final class SearchParams extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:SearchParams)
+      SearchParamsOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use SearchParams.newBuilder() to construct.
+    private SearchParams(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private SearchParams() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new SearchParams();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private SearchParams(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 13: {
+
+              minProfitAsPercent_ = input.readFloat();
+              break;
+            }
+            case 21: {
+
+              maxProfitAsPercent_ = input.readFloat();
+              break;
+            }
+            case 24: {
+
+              componentMinSize_ = input.readInt32();
+              break;
+            }
+            case 32: {
+
+              numberOfRandomLaunches_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_SearchParams_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_SearchParams_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.Builder.class);
+    }
+
+    public static final int MINPROFITASPERCENT_FIELD_NUMBER = 1;
+    private float minProfitAsPercent_;
+    /**
+     * <code>float minProfitAsPercent = 1;</code>
+     * @return The minProfitAsPercent.
+     */
+    @java.lang.Override
+    public float getMinProfitAsPercent() {
+      return minProfitAsPercent_;
+    }
+
+    public static final int MAXPROFITASPERCENT_FIELD_NUMBER = 2;
+    private float maxProfitAsPercent_;
+    /**
+     * <code>float maxProfitAsPercent = 2;</code>
+     * @return The maxProfitAsPercent.
+     */
+    @java.lang.Override
+    public float getMaxProfitAsPercent() {
+      return maxProfitAsPercent_;
+    }
+
+    public static final int COMPONENTMINSIZE_FIELD_NUMBER = 3;
+    private int componentMinSize_;
+    /**
+     * <code>int32 componentMinSize = 3;</code>
+     * @return The componentMinSize.
+     */
+    @java.lang.Override
+    public int getComponentMinSize() {
+      return componentMinSize_;
+    }
+
+    public static final int NUMBEROFRANDOMLAUNCHES_FIELD_NUMBER = 4;
+    private int numberOfRandomLaunches_;
+    /**
+     * <code>int32 numberOfRandomLaunches = 4;</code>
+     * @return The numberOfRandomLaunches.
+     */
+    @java.lang.Override
+    public int getNumberOfRandomLaunches() {
+      return numberOfRandomLaunches_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (minProfitAsPercent_ != 0F) {
+        output.writeFloat(1, minProfitAsPercent_);
+      }
+      if (maxProfitAsPercent_ != 0F) {
+        output.writeFloat(2, maxProfitAsPercent_);
+      }
+      if (componentMinSize_ != 0) {
+        output.writeInt32(3, componentMinSize_);
+      }
+      if (numberOfRandomLaunches_ != 0) {
+        output.writeInt32(4, numberOfRandomLaunches_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (minProfitAsPercent_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, minProfitAsPercent_);
+      }
+      if (maxProfitAsPercent_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, maxProfitAsPercent_);
+      }
+      if (componentMinSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, componentMinSize_);
+      }
+      if (numberOfRandomLaunches_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, numberOfRandomLaunches_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams)) {
+        return super.equals(obj);
+      }
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams other = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams) obj;
+
+      if (java.lang.Float.floatToIntBits(getMinProfitAsPercent())
+          != java.lang.Float.floatToIntBits(
+              other.getMinProfitAsPercent())) return false;
+      if (java.lang.Float.floatToIntBits(getMaxProfitAsPercent())
+          != java.lang.Float.floatToIntBits(
+              other.getMaxProfitAsPercent())) return false;
+      if (getComponentMinSize()
+          != other.getComponentMinSize()) return false;
+      if (getNumberOfRandomLaunches()
+          != other.getNumberOfRandomLaunches()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MINPROFITASPERCENT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getMinProfitAsPercent());
+      hash = (37 * hash) + MAXPROFITASPERCENT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getMaxProfitAsPercent());
+      hash = (37 * hash) + COMPONENTMINSIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getComponentMinSize();
+      hash = (37 * hash) + NUMBEROFRANDOMLAUNCHES_FIELD_NUMBER;
+      hash = (53 * hash) + getNumberOfRandomLaunches();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code SearchParams}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:SearchParams)
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParamsOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_SearchParams_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_SearchParams_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.Builder.class);
+      }
+
+      // Construct using com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        minProfitAsPercent_ = 0F;
+
+        maxProfitAsPercent_ = 0F;
+
+        componentMinSize_ = 0;
+
+        numberOfRandomLaunches_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_SearchParams_descriptor;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams getDefaultInstanceForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams build() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams buildPartial() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams result = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams(this);
+        result.minProfitAsPercent_ = minProfitAsPercent_;
+        result.maxProfitAsPercent_ = maxProfitAsPercent_;
+        result.componentMinSize_ = componentMinSize_;
+        result.numberOfRandomLaunches_ = numberOfRandomLaunches_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams) {
+          return mergeFrom((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams other) {
+        if (other == com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams.getDefaultInstance()) return this;
+        if (other.getMinProfitAsPercent() != 0F) {
+          setMinProfitAsPercent(other.getMinProfitAsPercent());
+        }
+        if (other.getMaxProfitAsPercent() != 0F) {
+          setMaxProfitAsPercent(other.getMaxProfitAsPercent());
+        }
+        if (other.getComponentMinSize() != 0) {
+          setComponentMinSize(other.getComponentMinSize());
+        }
+        if (other.getNumberOfRandomLaunches() != 0) {
+          setNumberOfRandomLaunches(other.getNumberOfRandomLaunches());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private float minProfitAsPercent_ ;
+      /**
+       * <code>float minProfitAsPercent = 1;</code>
+       * @return The minProfitAsPercent.
+       */
+      @java.lang.Override
+      public float getMinProfitAsPercent() {
+        return minProfitAsPercent_;
+      }
+      /**
+       * <code>float minProfitAsPercent = 1;</code>
+       * @param value The minProfitAsPercent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMinProfitAsPercent(float value) {
+        
+        minProfitAsPercent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float minProfitAsPercent = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMinProfitAsPercent() {
+        
+        minProfitAsPercent_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float maxProfitAsPercent_ ;
+      /**
+       * <code>float maxProfitAsPercent = 2;</code>
+       * @return The maxProfitAsPercent.
+       */
+      @java.lang.Override
+      public float getMaxProfitAsPercent() {
+        return maxProfitAsPercent_;
+      }
+      /**
+       * <code>float maxProfitAsPercent = 2;</code>
+       * @param value The maxProfitAsPercent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMaxProfitAsPercent(float value) {
+        
+        maxProfitAsPercent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float maxProfitAsPercent = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMaxProfitAsPercent() {
+        
+        maxProfitAsPercent_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int componentMinSize_ ;
+      /**
+       * <code>int32 componentMinSize = 3;</code>
+       * @return The componentMinSize.
+       */
+      @java.lang.Override
+      public int getComponentMinSize() {
+        return componentMinSize_;
+      }
+      /**
+       * <code>int32 componentMinSize = 3;</code>
+       * @param value The componentMinSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setComponentMinSize(int value) {
+        
+        componentMinSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 componentMinSize = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearComponentMinSize() {
+        
+        componentMinSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int numberOfRandomLaunches_ ;
+      /**
+       * <code>int32 numberOfRandomLaunches = 4;</code>
+       * @return The numberOfRandomLaunches.
+       */
+      @java.lang.Override
+      public int getNumberOfRandomLaunches() {
+        return numberOfRandomLaunches_;
+      }
+      /**
+       * <code>int32 numberOfRandomLaunches = 4;</code>
+       * @param value The numberOfRandomLaunches to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberOfRandomLaunches(int value) {
+        
+        numberOfRandomLaunches_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 numberOfRandomLaunches = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumberOfRandomLaunches() {
+        
+        numberOfRandomLaunches_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:SearchParams)
+    }
+
+    // @@protoc_insertion_point(class_scope:SearchParams)
+    private static final com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams();
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<SearchParams>
+        PARSER = new com.google.protobuf.AbstractParser<SearchParams>() {
+      @java.lang.Override
+      public SearchParams parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new SearchParams(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<SearchParams> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<SearchParams> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.SearchParams getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface StartVerticesOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:StartVertices)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int32 startVertices = 1;</code>
+     * @return A list containing the startVertices.
+     */
+    java.util.List<java.lang.Integer> getStartVerticesList();
+    /**
+     * <code>repeated int32 startVertices = 1;</code>
+     * @return The count of startVertices.
+     */
+    int getStartVerticesCount();
+    /**
+     * <code>repeated int32 startVertices = 1;</code>
+     * @param index The index of the element to return.
+     * @return The startVertices at the given index.
+     */
+    int getStartVertices(int index);
+  }
+  /**
+   * Protobuf type {@code StartVertices}
+   */
+  public static final class StartVertices extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:StartVertices)
+      StartVerticesOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use StartVertices.newBuilder() to construct.
+    private StartVertices(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private StartVertices() {
+      startVertices_ = emptyIntList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new StartVertices();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private StartVertices(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                startVertices_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              startVertices_.addInt(input.readInt32());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                startVertices_ = newIntList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                startVertices_.addInt(input.readInt32());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          startVertices_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_StartVertices_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_StartVertices_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.Builder.class);
+    }
+
+    public static final int STARTVERTICES_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.IntList startVertices_;
+    /**
+     * <code>repeated int32 startVertices = 1;</code>
+     * @return A list containing the startVertices.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getStartVerticesList() {
+      return startVertices_;
+    }
+    /**
+     * <code>repeated int32 startVertices = 1;</code>
+     * @return The count of startVertices.
+     */
+    public int getStartVerticesCount() {
+      return startVertices_.size();
+    }
+    /**
+     * <code>repeated int32 startVertices = 1;</code>
+     * @param index The index of the element to return.
+     * @return The startVertices at the given index.
+     */
+    public int getStartVertices(int index) {
+      return startVertices_.getInt(index);
+    }
+    private int startVerticesMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getStartVerticesList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(startVerticesMemoizedSerializedSize);
+      }
+      for (int i = 0; i < startVertices_.size(); i++) {
+        output.writeInt32NoTag(startVertices_.getInt(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < startVertices_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(startVertices_.getInt(i));
+        }
+        size += dataSize;
+        if (!getStartVerticesList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        startVerticesMemoizedSerializedSize = dataSize;
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices)) {
+        return super.equals(obj);
+      }
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices other = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices) obj;
+
+      if (!getStartVerticesList()
+          .equals(other.getStartVerticesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getStartVerticesCount() > 0) {
+        hash = (37 * hash) + STARTVERTICES_FIELD_NUMBER;
+        hash = (53 * hash) + getStartVerticesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code StartVertices}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:StartVertices)
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVerticesOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_StartVertices_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_StartVertices_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.Builder.class);
+      }
+
+      // Construct using com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        startVertices_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_StartVertices_descriptor;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices getDefaultInstanceForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices build() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices buildPartial() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices result = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          startVertices_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.startVertices_ = startVertices_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices) {
+          return mergeFrom((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices other) {
+        if (other == com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices.getDefaultInstance()) return this;
+        if (!other.startVertices_.isEmpty()) {
+          if (startVertices_.isEmpty()) {
+            startVertices_ = other.startVertices_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureStartVerticesIsMutable();
+            startVertices_.addAll(other.startVertices_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.IntList startVertices_ = emptyIntList();
+      private void ensureStartVerticesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          startVertices_ = mutableCopy(startVertices_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <code>repeated int32 startVertices = 1;</code>
+       * @return A list containing the startVertices.
+       */
+      public java.util.List<java.lang.Integer>
+          getStartVerticesList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(startVertices_) : startVertices_;
+      }
+      /**
+       * <code>repeated int32 startVertices = 1;</code>
+       * @return The count of startVertices.
+       */
+      public int getStartVerticesCount() {
+        return startVertices_.size();
+      }
+      /**
+       * <code>repeated int32 startVertices = 1;</code>
+       * @param index The index of the element to return.
+       * @return The startVertices at the given index.
+       */
+      public int getStartVertices(int index) {
+        return startVertices_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 startVertices = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The startVertices to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartVertices(
+          int index, int value) {
+        ensureStartVerticesIsMutable();
+        startVertices_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 startVertices = 1;</code>
+       * @param value The startVertices to add.
+       * @return This builder for chaining.
+       */
+      public Builder addStartVertices(int value) {
+        ensureStartVerticesIsMutable();
+        startVertices_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 startVertices = 1;</code>
+       * @param values The startVertices to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllStartVertices(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureStartVerticesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, startVertices_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 startVertices = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartVertices() {
+        startVertices_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:StartVertices)
+    }
+
+    // @@protoc_insertion_point(class_scope:StartVertices)
+    private static final com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices();
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<StartVertices>
+        PARSER = new com.google.protobuf.AbstractParser<StartVertices>() {
+      @java.lang.Override
+      public StartVertices parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new StartVertices(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<StartVertices> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<StartVertices> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.StartVertices getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface GraphOrBuilder extends
       // @@protoc_insertion_point(interface_extends:Graph)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
     java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> 
-        getEdgeList();
+        getEdgesList();
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
-    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdge(int index);
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdges(int index);
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
-    int getEdgeCount();
+    int getEdgesCount();
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
     java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
-        getEdgeOrBuilderList();
+        getEdgesOrBuilderList();
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
-    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgeOrBuilder(
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgesOrBuilder(
         int index);
+
+    /**
+     * <code>int32 numberOfVertices = 2;</code>
+     * @return The numberOfVertices.
+     */
+    int getNumberOfVertices();
   }
   /**
    * Protobuf type {@code Graph}
@@ -55,7 +2405,7 @@ public final class HermesOuterClass {
       super(builder);
     }
     private Graph() {
-      edge_ = java.util.Collections.emptyList();
+      edges_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -91,11 +2441,16 @@ public final class HermesOuterClass {
               break;
             case 10: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                edge_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge>();
+                edges_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge>();
                 mutable_bitField0_ |= 0x00000001;
               }
-              edge_.add(
+              edges_.add(
                   input.readMessage(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.parser(), extensionRegistry));
+              break;
+            }
+            case 16: {
+
+              numberOfVertices_ = input.readInt32();
               break;
             }
             default: {
@@ -114,7 +2469,7 @@ public final class HermesOuterClass {
             e).setUnfinishedMessage(this);
       } finally {
         if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          edge_ = java.util.Collections.unmodifiableList(edge_);
+          edges_ = java.util.Collections.unmodifiableList(edges_);
         }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
@@ -133,44 +2488,55 @@ public final class HermesOuterClass {
               com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.Builder.class);
     }
 
-    public static final int EDGE_FIELD_NUMBER = 1;
-    private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> edge_;
+    public static final int EDGES_FIELD_NUMBER = 1;
+    private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> edges_;
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
     @java.lang.Override
-    public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> getEdgeList() {
-      return edge_;
+    public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> getEdgesList() {
+      return edges_;
     }
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
     @java.lang.Override
     public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
-        getEdgeOrBuilderList() {
-      return edge_;
+        getEdgesOrBuilderList() {
+      return edges_;
     }
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
     @java.lang.Override
-    public int getEdgeCount() {
-      return edge_.size();
+    public int getEdgesCount() {
+      return edges_.size();
     }
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
     @java.lang.Override
-    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdge(int index) {
-      return edge_.get(index);
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdges(int index) {
+      return edges_.get(index);
     }
     /**
-     * <code>repeated .Edge edge = 1;</code>
+     * <code>repeated .Edge edges = 1;</code>
      */
     @java.lang.Override
-    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgeOrBuilder(
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgesOrBuilder(
         int index) {
-      return edge_.get(index);
+      return edges_.get(index);
+    }
+
+    public static final int NUMBEROFVERTICES_FIELD_NUMBER = 2;
+    private int numberOfVertices_;
+    /**
+     * <code>int32 numberOfVertices = 2;</code>
+     * @return The numberOfVertices.
+     */
+    @java.lang.Override
+    public int getNumberOfVertices() {
+      return numberOfVertices_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -187,8 +2553,11 @@ public final class HermesOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      for (int i = 0; i < edge_.size(); i++) {
-        output.writeMessage(1, edge_.get(i));
+      for (int i = 0; i < edges_.size(); i++) {
+        output.writeMessage(1, edges_.get(i));
+      }
+      if (numberOfVertices_ != 0) {
+        output.writeInt32(2, numberOfVertices_);
       }
       unknownFields.writeTo(output);
     }
@@ -199,9 +2568,13 @@ public final class HermesOuterClass {
       if (size != -1) return size;
 
       size = 0;
-      for (int i = 0; i < edge_.size(); i++) {
+      for (int i = 0; i < edges_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, edge_.get(i));
+          .computeMessageSize(1, edges_.get(i));
+      }
+      if (numberOfVertices_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, numberOfVertices_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -218,8 +2591,10 @@ public final class HermesOuterClass {
       }
       com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph other = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph) obj;
 
-      if (!getEdgeList()
-          .equals(other.getEdgeList())) return false;
+      if (!getEdgesList()
+          .equals(other.getEdgesList())) return false;
+      if (getNumberOfVertices()
+          != other.getNumberOfVertices()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -231,10 +2606,12 @@ public final class HermesOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (getEdgeCount() > 0) {
-        hash = (37 * hash) + EDGE_FIELD_NUMBER;
-        hash = (53 * hash) + getEdgeList().hashCode();
+      if (getEdgesCount() > 0) {
+        hash = (37 * hash) + EDGES_FIELD_NUMBER;
+        hash = (53 * hash) + getEdgesList().hashCode();
       }
+      hash = (37 * hash) + NUMBEROFVERTICES_FIELD_NUMBER;
+      hash = (53 * hash) + getNumberOfVertices();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -363,18 +2740,20 @@ public final class HermesOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
-          getEdgeFieldBuilder();
+          getEdgesFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (edgeBuilder_ == null) {
-          edge_ = java.util.Collections.emptyList();
+        if (edgesBuilder_ == null) {
+          edges_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
         } else {
-          edgeBuilder_.clear();
+          edgesBuilder_.clear();
         }
+        numberOfVertices_ = 0;
+
         return this;
       }
 
@@ -402,15 +2781,16 @@ public final class HermesOuterClass {
       public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph buildPartial() {
         com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph result = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph(this);
         int from_bitField0_ = bitField0_;
-        if (edgeBuilder_ == null) {
+        if (edgesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
-            edge_ = java.util.Collections.unmodifiableList(edge_);
+            edges_ = java.util.Collections.unmodifiableList(edges_);
             bitField0_ = (bitField0_ & ~0x00000001);
           }
-          result.edge_ = edge_;
+          result.edges_ = edges_;
         } else {
-          result.edge_ = edgeBuilder_.build();
+          result.edges_ = edgesBuilder_.build();
         }
+        result.numberOfVertices_ = numberOfVertices_;
         onBuilt();
         return result;
       }
@@ -459,31 +2839,34 @@ public final class HermesOuterClass {
 
       public Builder mergeFrom(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph other) {
         if (other == com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph.getDefaultInstance()) return this;
-        if (edgeBuilder_ == null) {
-          if (!other.edge_.isEmpty()) {
-            if (edge_.isEmpty()) {
-              edge_ = other.edge_;
+        if (edgesBuilder_ == null) {
+          if (!other.edges_.isEmpty()) {
+            if (edges_.isEmpty()) {
+              edges_ = other.edges_;
               bitField0_ = (bitField0_ & ~0x00000001);
             } else {
-              ensureEdgeIsMutable();
-              edge_.addAll(other.edge_);
+              ensureEdgesIsMutable();
+              edges_.addAll(other.edges_);
             }
             onChanged();
           }
         } else {
-          if (!other.edge_.isEmpty()) {
-            if (edgeBuilder_.isEmpty()) {
-              edgeBuilder_.dispose();
-              edgeBuilder_ = null;
-              edge_ = other.edge_;
+          if (!other.edges_.isEmpty()) {
+            if (edgesBuilder_.isEmpty()) {
+              edgesBuilder_.dispose();
+              edgesBuilder_ = null;
+              edges_ = other.edges_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              edgeBuilder_ = 
+              edgesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getEdgeFieldBuilder() : null;
+                   getEdgesFieldBuilder() : null;
             } else {
-              edgeBuilder_.addAllMessages(other.edge_);
+              edgesBuilder_.addAllMessages(other.edges_);
             }
           }
+        }
+        if (other.getNumberOfVertices() != 0) {
+          setNumberOfVertices(other.getNumberOfVertices());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -515,244 +2898,275 @@ public final class HermesOuterClass {
       }
       private int bitField0_;
 
-      private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> edge_ =
+      private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> edges_ =
         java.util.Collections.emptyList();
-      private void ensureEdgeIsMutable() {
+      private void ensureEdgesIsMutable() {
         if (!((bitField0_ & 0x00000001) != 0)) {
-          edge_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge>(edge_);
+          edges_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge>(edges_);
           bitField0_ |= 0x00000001;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> edgeBuilder_;
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> edgesBuilder_;
 
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> getEdgeList() {
-        if (edgeBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(edge_);
+      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> getEdgesList() {
+        if (edgesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(edges_);
         } else {
-          return edgeBuilder_.getMessageList();
+          return edgesBuilder_.getMessageList();
         }
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public int getEdgeCount() {
-        if (edgeBuilder_ == null) {
-          return edge_.size();
+      public int getEdgesCount() {
+        if (edgesBuilder_ == null) {
+          return edges_.size();
         } else {
-          return edgeBuilder_.getCount();
+          return edgesBuilder_.getCount();
         }
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdge(int index) {
-        if (edgeBuilder_ == null) {
-          return edge_.get(index);
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdges(int index) {
+        if (edgesBuilder_ == null) {
+          return edges_.get(index);
         } else {
-          return edgeBuilder_.getMessage(index);
+          return edgesBuilder_.getMessage(index);
         }
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public Builder setEdge(
+      public Builder setEdges(
           int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
-        if (edgeBuilder_ == null) {
+        if (edgesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEdgeIsMutable();
-          edge_.set(index, value);
+          ensureEdgesIsMutable();
+          edges_.set(index, value);
           onChanged();
         } else {
-          edgeBuilder_.setMessage(index, value);
+          edgesBuilder_.setMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public Builder setEdge(
+      public Builder setEdges(
           int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder builderForValue) {
-        if (edgeBuilder_ == null) {
-          ensureEdgeIsMutable();
-          edge_.set(index, builderForValue.build());
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.set(index, builderForValue.build());
           onChanged();
         } else {
-          edgeBuilder_.setMessage(index, builderForValue.build());
+          edgesBuilder_.setMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public Builder addEdge(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
-        if (edgeBuilder_ == null) {
+      public Builder addEdges(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
+        if (edgesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEdgeIsMutable();
-          edge_.add(value);
+          ensureEdgesIsMutable();
+          edges_.add(value);
           onChanged();
         } else {
-          edgeBuilder_.addMessage(value);
+          edgesBuilder_.addMessage(value);
         }
         return this;
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public Builder addEdge(
+      public Builder addEdges(
           int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
-        if (edgeBuilder_ == null) {
+        if (edgesBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          ensureEdgeIsMutable();
-          edge_.add(index, value);
+          ensureEdgesIsMutable();
+          edges_.add(index, value);
           onChanged();
         } else {
-          edgeBuilder_.addMessage(index, value);
+          edgesBuilder_.addMessage(index, value);
         }
         return this;
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public Builder addEdge(
+      public Builder addEdges(
           com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder builderForValue) {
-        if (edgeBuilder_ == null) {
-          ensureEdgeIsMutable();
-          edge_.add(builderForValue.build());
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.add(builderForValue.build());
           onChanged();
         } else {
-          edgeBuilder_.addMessage(builderForValue.build());
+          edgesBuilder_.addMessage(builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public Builder addEdge(
+      public Builder addEdges(
           int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder builderForValue) {
-        if (edgeBuilder_ == null) {
-          ensureEdgeIsMutable();
-          edge_.add(index, builderForValue.build());
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.add(index, builderForValue.build());
           onChanged();
         } else {
-          edgeBuilder_.addMessage(index, builderForValue.build());
+          edgesBuilder_.addMessage(index, builderForValue.build());
         }
         return this;
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public Builder addAllEdge(
+      public Builder addAllEdges(
           java.lang.Iterable<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> values) {
-        if (edgeBuilder_ == null) {
-          ensureEdgeIsMutable();
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, edge_);
+              values, edges_);
           onChanged();
         } else {
-          edgeBuilder_.addAllMessages(values);
+          edgesBuilder_.addAllMessages(values);
         }
         return this;
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public Builder clearEdge() {
-        if (edgeBuilder_ == null) {
-          edge_ = java.util.Collections.emptyList();
+      public Builder clearEdges() {
+        if (edgesBuilder_ == null) {
+          edges_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
         } else {
-          edgeBuilder_.clear();
+          edgesBuilder_.clear();
         }
         return this;
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public Builder removeEdge(int index) {
-        if (edgeBuilder_ == null) {
-          ensureEdgeIsMutable();
-          edge_.remove(index);
+      public Builder removeEdges(int index) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.remove(index);
           onChanged();
         } else {
-          edgeBuilder_.remove(index);
+          edgesBuilder_.remove(index);
         }
         return this;
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder getEdgeBuilder(
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder getEdgesBuilder(
           int index) {
-        return getEdgeFieldBuilder().getBuilder(index);
+        return getEdgesFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgeOrBuilder(
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgesOrBuilder(
           int index) {
-        if (edgeBuilder_ == null) {
-          return edge_.get(index);  } else {
-          return edgeBuilder_.getMessageOrBuilder(index);
+        if (edgesBuilder_ == null) {
+          return edges_.get(index);  } else {
+          return edgesBuilder_.getMessageOrBuilder(index);
         }
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
       public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
-           getEdgeOrBuilderList() {
-        if (edgeBuilder_ != null) {
-          return edgeBuilder_.getMessageOrBuilderList();
+           getEdgesOrBuilderList() {
+        if (edgesBuilder_ != null) {
+          return edgesBuilder_.getMessageOrBuilderList();
         } else {
-          return java.util.Collections.unmodifiableList(edge_);
+          return java.util.Collections.unmodifiableList(edges_);
         }
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder addEdgeBuilder() {
-        return getEdgeFieldBuilder().addBuilder(
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder addEdgesBuilder() {
+        return getEdgesFieldBuilder().addBuilder(
             com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.getDefaultInstance());
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder addEdgeBuilder(
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder addEdgesBuilder(
           int index) {
-        return getEdgeFieldBuilder().addBuilder(
+        return getEdgesFieldBuilder().addBuilder(
             index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.getDefaultInstance());
       }
       /**
-       * <code>repeated .Edge edge = 1;</code>
+       * <code>repeated .Edge edges = 1;</code>
        */
       public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder> 
-           getEdgeBuilderList() {
-        return getEdgeFieldBuilder().getBuilderList();
+           getEdgesBuilderList() {
+        return getEdgesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
           com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
-          getEdgeFieldBuilder() {
-        if (edgeBuilder_ == null) {
-          edgeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+          getEdgesFieldBuilder() {
+        if (edgesBuilder_ == null) {
+          edgesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder>(
-                  edge_,
+                  edges_,
                   ((bitField0_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
-          edge_ = null;
+          edges_ = null;
         }
-        return edgeBuilder_;
+        return edgesBuilder_;
+      }
+
+      private int numberOfVertices_ ;
+      /**
+       * <code>int32 numberOfVertices = 2;</code>
+       * @return The numberOfVertices.
+       */
+      @java.lang.Override
+      public int getNumberOfVertices() {
+        return numberOfVertices_;
+      }
+      /**
+       * <code>int32 numberOfVertices = 2;</code>
+       * @param value The numberOfVertices to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNumberOfVertices(int value) {
+        
+        numberOfVertices_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 numberOfVertices = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNumberOfVertices() {
+        
+        numberOfVertices_ = 0;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -802,6 +3216,2969 @@ public final class HermesOuterClass {
 
     @java.lang.Override
     public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Graph getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HermesArbitrageResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:HermesArbitrageResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> 
+        getCyclesList();
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getCycles(int index);
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    int getCyclesCount();
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> 
+        getCyclesOrBuilderList();
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder getCyclesOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code HermesArbitrageResponse}
+   */
+  public static final class HermesArbitrageResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:HermesArbitrageResponse)
+      HermesArbitrageResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HermesArbitrageResponse.newBuilder() to construct.
+    private HermesArbitrageResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HermesArbitrageResponse() {
+      cycles_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HermesArbitrageResponse();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private HermesArbitrageResponse(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                cycles_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              cycles_.add(
+                  input.readMessage(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          cycles_ = java.util.Collections.unmodifiableList(cycles_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.Builder.class);
+    }
+
+    public static final int CYCLES_FIELD_NUMBER = 1;
+    private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> cycles_;
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> getCyclesList() {
+      return cycles_;
+    }
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> 
+        getCyclesOrBuilderList() {
+      return cycles_;
+    }
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    @java.lang.Override
+    public int getCyclesCount() {
+      return cycles_.size();
+    }
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getCycles(int index) {
+      return cycles_.get(index);
+    }
+    /**
+     * <code>repeated .Cycle cycles = 1;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder getCyclesOrBuilder(
+        int index) {
+      return cycles_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < cycles_.size(); i++) {
+        output.writeMessage(1, cycles_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < cycles_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, cycles_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse)) {
+        return super.equals(obj);
+      }
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse other = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse) obj;
+
+      if (!getCyclesList()
+          .equals(other.getCyclesList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCyclesCount() > 0) {
+        hash = (37 * hash) + CYCLES_FIELD_NUMBER;
+        hash = (53 * hash) + getCyclesList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code HermesArbitrageResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:HermesArbitrageResponse)
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.Builder.class);
+      }
+
+      // Construct using com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getCyclesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (cyclesBuilder_ == null) {
+          cycles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          cyclesBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_HermesArbitrageResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse getDefaultInstanceForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse build() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse buildPartial() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse result = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse(this);
+        int from_bitField0_ = bitField0_;
+        if (cyclesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            cycles_ = java.util.Collections.unmodifiableList(cycles_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.cycles_ = cycles_;
+        } else {
+          result.cycles_ = cyclesBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse) {
+          return mergeFrom((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse other) {
+        if (other == com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.getDefaultInstance()) return this;
+        if (cyclesBuilder_ == null) {
+          if (!other.cycles_.isEmpty()) {
+            if (cycles_.isEmpty()) {
+              cycles_ = other.cycles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureCyclesIsMutable();
+              cycles_.addAll(other.cycles_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.cycles_.isEmpty()) {
+            if (cyclesBuilder_.isEmpty()) {
+              cyclesBuilder_.dispose();
+              cyclesBuilder_ = null;
+              cycles_ = other.cycles_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              cyclesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCyclesFieldBuilder() : null;
+            } else {
+              cyclesBuilder_.addAllMessages(other.cycles_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> cycles_ =
+        java.util.Collections.emptyList();
+      private void ensureCyclesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          cycles_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle>(cycles_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> cyclesBuilder_;
+
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> getCyclesList() {
+        if (cyclesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(cycles_);
+        } else {
+          return cyclesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public int getCyclesCount() {
+        if (cyclesBuilder_ == null) {
+          return cycles_.size();
+        } else {
+          return cyclesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getCycles(int index) {
+        if (cyclesBuilder_ == null) {
+          return cycles_.get(index);
+        } else {
+          return cyclesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public Builder setCycles(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle value) {
+        if (cyclesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCyclesIsMutable();
+          cycles_.set(index, value);
+          onChanged();
+        } else {
+          cyclesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public Builder setCycles(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder builderForValue) {
+        if (cyclesBuilder_ == null) {
+          ensureCyclesIsMutable();
+          cycles_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          cyclesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public Builder addCycles(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle value) {
+        if (cyclesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCyclesIsMutable();
+          cycles_.add(value);
+          onChanged();
+        } else {
+          cyclesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public Builder addCycles(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle value) {
+        if (cyclesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCyclesIsMutable();
+          cycles_.add(index, value);
+          onChanged();
+        } else {
+          cyclesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public Builder addCycles(
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder builderForValue) {
+        if (cyclesBuilder_ == null) {
+          ensureCyclesIsMutable();
+          cycles_.add(builderForValue.build());
+          onChanged();
+        } else {
+          cyclesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public Builder addCycles(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder builderForValue) {
+        if (cyclesBuilder_ == null) {
+          ensureCyclesIsMutable();
+          cycles_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          cyclesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public Builder addAllCycles(
+          java.lang.Iterable<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> values) {
+        if (cyclesBuilder_ == null) {
+          ensureCyclesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, cycles_);
+          onChanged();
+        } else {
+          cyclesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public Builder clearCycles() {
+        if (cyclesBuilder_ == null) {
+          cycles_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          cyclesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public Builder removeCycles(int index) {
+        if (cyclesBuilder_ == null) {
+          ensureCyclesIsMutable();
+          cycles_.remove(index);
+          onChanged();
+        } else {
+          cyclesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder getCyclesBuilder(
+          int index) {
+        return getCyclesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder getCyclesOrBuilder(
+          int index) {
+        if (cyclesBuilder_ == null) {
+          return cycles_.get(index);  } else {
+          return cyclesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> 
+           getCyclesOrBuilderList() {
+        if (cyclesBuilder_ != null) {
+          return cyclesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(cycles_);
+        }
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder addCyclesBuilder() {
+        return getCyclesFieldBuilder().addBuilder(
+            com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder addCyclesBuilder(
+          int index) {
+        return getCyclesFieldBuilder().addBuilder(
+            index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Cycle cycles = 1;</code>
+       */
+      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder> 
+           getCyclesBuilderList() {
+        return getCyclesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> 
+          getCyclesFieldBuilder() {
+        if (cyclesBuilder_ == null) {
+          cyclesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder>(
+                  cycles_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          cycles_ = null;
+        }
+        return cyclesBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:HermesArbitrageResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:HermesArbitrageResponse)
+    private static final com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse();
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HermesArbitrageResponse>
+        PARSER = new com.google.protobuf.AbstractParser<HermesArbitrageResponse>() {
+      @java.lang.Override
+      public HermesArbitrageResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new HermesArbitrageResponse(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<HermesArbitrageResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HermesArbitrageResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface CycleOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Cycle)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> 
+        getEdgesList();
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdges(int index);
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    int getEdgesCount();
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
+        getEdgesOrBuilderList();
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgesOrBuilder(
+        int index);
+
+    /**
+     * <code>float profitAsPercent = 2;</code>
+     * @return The profitAsPercent.
+     */
+    float getProfitAsPercent();
+
+    /**
+     * <code>int32 cycleSize = 3;</code>
+     * @return The cycleSize.
+     */
+    int getCycleSize();
+
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection> 
+        getConnectionsList();
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection getConnections(int index);
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    int getConnectionsCount();
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder> 
+        getConnectionsOrBuilderList();
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder getConnectionsOrBuilder(
+        int index);
+  }
+  /**
+   * Protobuf type {@code Cycle}
+   */
+  public static final class Cycle extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Cycle)
+      CycleOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Cycle.newBuilder() to construct.
+    private Cycle(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Cycle() {
+      edges_ = java.util.Collections.emptyList();
+      connections_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Cycle();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Cycle(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                edges_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              edges_.add(
+                  input.readMessage(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.parser(), extensionRegistry));
+              break;
+            }
+            case 21: {
+
+              profitAsPercent_ = input.readFloat();
+              break;
+            }
+            case 24: {
+
+              cycleSize_ = input.readInt32();
+              break;
+            }
+            case 34: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                connections_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection>();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              connections_.add(
+                  input.readMessage(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          edges_ = java.util.Collections.unmodifiableList(edges_);
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          connections_ = java.util.Collections.unmodifiableList(connections_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder.class);
+    }
+
+    public static final int EDGES_FIELD_NUMBER = 1;
+    private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> edges_;
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> getEdgesList() {
+      return edges_;
+    }
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
+        getEdgesOrBuilderList() {
+      return edges_;
+    }
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public int getEdgesCount() {
+      return edges_.size();
+    }
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdges(int index) {
+      return edges_.get(index);
+    }
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgesOrBuilder(
+        int index) {
+      return edges_.get(index);
+    }
+
+    public static final int PROFITASPERCENT_FIELD_NUMBER = 2;
+    private float profitAsPercent_;
+    /**
+     * <code>float profitAsPercent = 2;</code>
+     * @return The profitAsPercent.
+     */
+    @java.lang.Override
+    public float getProfitAsPercent() {
+      return profitAsPercent_;
+    }
+
+    public static final int CYCLESIZE_FIELD_NUMBER = 3;
+    private int cycleSize_;
+    /**
+     * <code>int32 cycleSize = 3;</code>
+     * @return The cycleSize.
+     */
+    @java.lang.Override
+    public int getCycleSize() {
+      return cycleSize_;
+    }
+
+    public static final int CONNECTIONS_FIELD_NUMBER = 4;
+    private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection> connections_;
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection> getConnectionsList() {
+      return connections_;
+    }
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder> 
+        getConnectionsOrBuilderList() {
+      return connections_;
+    }
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    @java.lang.Override
+    public int getConnectionsCount() {
+      return connections_.size();
+    }
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection getConnections(int index) {
+      return connections_.get(index);
+    }
+    /**
+     * <code>repeated .Connection connections = 4;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder getConnectionsOrBuilder(
+        int index) {
+      return connections_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < edges_.size(); i++) {
+        output.writeMessage(1, edges_.get(i));
+      }
+      if (profitAsPercent_ != 0F) {
+        output.writeFloat(2, profitAsPercent_);
+      }
+      if (cycleSize_ != 0) {
+        output.writeInt32(3, cycleSize_);
+      }
+      for (int i = 0; i < connections_.size(); i++) {
+        output.writeMessage(4, connections_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < edges_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, edges_.get(i));
+      }
+      if (profitAsPercent_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, profitAsPercent_);
+      }
+      if (cycleSize_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(3, cycleSize_);
+      }
+      for (int i = 0; i < connections_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, connections_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle)) {
+        return super.equals(obj);
+      }
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle other = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle) obj;
+
+      if (!getEdgesList()
+          .equals(other.getEdgesList())) return false;
+      if (java.lang.Float.floatToIntBits(getProfitAsPercent())
+          != java.lang.Float.floatToIntBits(
+              other.getProfitAsPercent())) return false;
+      if (getCycleSize()
+          != other.getCycleSize()) return false;
+      if (!getConnectionsList()
+          .equals(other.getConnectionsList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEdgesCount() > 0) {
+        hash = (37 * hash) + EDGES_FIELD_NUMBER;
+        hash = (53 * hash) + getEdgesList().hashCode();
+      }
+      hash = (37 * hash) + PROFITASPERCENT_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getProfitAsPercent());
+      hash = (37 * hash) + CYCLESIZE_FIELD_NUMBER;
+      hash = (53 * hash) + getCycleSize();
+      if (getConnectionsCount() > 0) {
+        hash = (37 * hash) + CONNECTIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getConnectionsList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Cycle}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Cycle)
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder.class);
+      }
+
+      // Construct using com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEdgesFieldBuilder();
+          getConnectionsFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (edgesBuilder_ == null) {
+          edges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          edgesBuilder_.clear();
+        }
+        profitAsPercent_ = 0F;
+
+        cycleSize_ = 0;
+
+        if (connectionsBuilder_ == null) {
+          connections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        } else {
+          connectionsBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_descriptor;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getDefaultInstanceForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle build() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle buildPartial() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle result = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle(this);
+        int from_bitField0_ = bitField0_;
+        if (edgesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            edges_ = java.util.Collections.unmodifiableList(edges_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.edges_ = edges_;
+        } else {
+          result.edges_ = edgesBuilder_.build();
+        }
+        result.profitAsPercent_ = profitAsPercent_;
+        result.cycleSize_ = cycleSize_;
+        if (connectionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            connections_ = java.util.Collections.unmodifiableList(connections_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.connections_ = connections_;
+        } else {
+          result.connections_ = connectionsBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle) {
+          return mergeFrom((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle other) {
+        if (other == com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.getDefaultInstance()) return this;
+        if (edgesBuilder_ == null) {
+          if (!other.edges_.isEmpty()) {
+            if (edges_.isEmpty()) {
+              edges_ = other.edges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEdgesIsMutable();
+              edges_.addAll(other.edges_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.edges_.isEmpty()) {
+            if (edgesBuilder_.isEmpty()) {
+              edgesBuilder_.dispose();
+              edgesBuilder_ = null;
+              edges_ = other.edges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              edgesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEdgesFieldBuilder() : null;
+            } else {
+              edgesBuilder_.addAllMessages(other.edges_);
+            }
+          }
+        }
+        if (other.getProfitAsPercent() != 0F) {
+          setProfitAsPercent(other.getProfitAsPercent());
+        }
+        if (other.getCycleSize() != 0) {
+          setCycleSize(other.getCycleSize());
+        }
+        if (connectionsBuilder_ == null) {
+          if (!other.connections_.isEmpty()) {
+            if (connections_.isEmpty()) {
+              connections_ = other.connections_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureConnectionsIsMutable();
+              connections_.addAll(other.connections_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.connections_.isEmpty()) {
+            if (connectionsBuilder_.isEmpty()) {
+              connectionsBuilder_.dispose();
+              connectionsBuilder_ = null;
+              connections_ = other.connections_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              connectionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConnectionsFieldBuilder() : null;
+            } else {
+              connectionsBuilder_.addAllMessages(other.connections_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> edges_ =
+        java.util.Collections.emptyList();
+      private void ensureEdgesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          edges_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge>(edges_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> edgesBuilder_;
+
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> getEdgesList() {
+        if (edgesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(edges_);
+        } else {
+          return edgesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public int getEdgesCount() {
+        if (edgesBuilder_ == null) {
+          return edges_.size();
+        } else {
+          return edgesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdges(int index) {
+        if (edgesBuilder_ == null) {
+          return edges_.get(index);
+        } else {
+          return edgesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder setEdges(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
+        if (edgesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEdgesIsMutable();
+          edges_.set(index, value);
+          onChanged();
+        } else {
+          edgesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder setEdges(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder builderForValue) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          edgesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addEdges(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
+        if (edgesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEdgesIsMutable();
+          edges_.add(value);
+          onChanged();
+        } else {
+          edgesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addEdges(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
+        if (edgesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEdgesIsMutable();
+          edges_.add(index, value);
+          onChanged();
+        } else {
+          edgesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addEdges(
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder builderForValue) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.add(builderForValue.build());
+          onChanged();
+        } else {
+          edgesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addEdges(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder builderForValue) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          edgesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addAllEdges(
+          java.lang.Iterable<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> values) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, edges_);
+          onChanged();
+        } else {
+          edgesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder clearEdges() {
+        if (edgesBuilder_ == null) {
+          edges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          edgesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder removeEdges(int index) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.remove(index);
+          onChanged();
+        } else {
+          edgesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder getEdgesBuilder(
+          int index) {
+        return getEdgesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgesOrBuilder(
+          int index) {
+        if (edgesBuilder_ == null) {
+          return edges_.get(index);  } else {
+          return edgesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
+           getEdgesOrBuilderList() {
+        if (edgesBuilder_ != null) {
+          return edgesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(edges_);
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder addEdgesBuilder() {
+        return getEdgesFieldBuilder().addBuilder(
+            com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder addEdgesBuilder(
+          int index) {
+        return getEdgesFieldBuilder().addBuilder(
+            index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder> 
+           getEdgesBuilderList() {
+        return getEdgesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
+          getEdgesFieldBuilder() {
+        if (edgesBuilder_ == null) {
+          edgesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder>(
+                  edges_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          edges_ = null;
+        }
+        return edgesBuilder_;
+      }
+
+      private float profitAsPercent_ ;
+      /**
+       * <code>float profitAsPercent = 2;</code>
+       * @return The profitAsPercent.
+       */
+      @java.lang.Override
+      public float getProfitAsPercent() {
+        return profitAsPercent_;
+      }
+      /**
+       * <code>float profitAsPercent = 2;</code>
+       * @param value The profitAsPercent to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProfitAsPercent(float value) {
+        
+        profitAsPercent_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float profitAsPercent = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProfitAsPercent() {
+        
+        profitAsPercent_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int cycleSize_ ;
+      /**
+       * <code>int32 cycleSize = 3;</code>
+       * @return The cycleSize.
+       */
+      @java.lang.Override
+      public int getCycleSize() {
+        return cycleSize_;
+      }
+      /**
+       * <code>int32 cycleSize = 3;</code>
+       * @param value The cycleSize to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCycleSize(int value) {
+        
+        cycleSize_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 cycleSize = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCycleSize() {
+        
+        cycleSize_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection> connections_ =
+        java.util.Collections.emptyList();
+      private void ensureConnectionsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          connections_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection>(connections_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder> connectionsBuilder_;
+
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection> getConnectionsList() {
+        if (connectionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(connections_);
+        } else {
+          return connectionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public int getConnectionsCount() {
+        if (connectionsBuilder_ == null) {
+          return connections_.size();
+        } else {
+          return connectionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection getConnections(int index) {
+        if (connectionsBuilder_ == null) {
+          return connections_.get(index);
+        } else {
+          return connectionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public Builder setConnections(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection value) {
+        if (connectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConnectionsIsMutable();
+          connections_.set(index, value);
+          onChanged();
+        } else {
+          connectionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public Builder setConnections(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder builderForValue) {
+        if (connectionsBuilder_ == null) {
+          ensureConnectionsIsMutable();
+          connections_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          connectionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public Builder addConnections(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection value) {
+        if (connectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConnectionsIsMutable();
+          connections_.add(value);
+          onChanged();
+        } else {
+          connectionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public Builder addConnections(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection value) {
+        if (connectionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConnectionsIsMutable();
+          connections_.add(index, value);
+          onChanged();
+        } else {
+          connectionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public Builder addConnections(
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder builderForValue) {
+        if (connectionsBuilder_ == null) {
+          ensureConnectionsIsMutable();
+          connections_.add(builderForValue.build());
+          onChanged();
+        } else {
+          connectionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public Builder addConnections(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder builderForValue) {
+        if (connectionsBuilder_ == null) {
+          ensureConnectionsIsMutable();
+          connections_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          connectionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public Builder addAllConnections(
+          java.lang.Iterable<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection> values) {
+        if (connectionsBuilder_ == null) {
+          ensureConnectionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, connections_);
+          onChanged();
+        } else {
+          connectionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public Builder clearConnections() {
+        if (connectionsBuilder_ == null) {
+          connections_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          connectionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public Builder removeConnections(int index) {
+        if (connectionsBuilder_ == null) {
+          ensureConnectionsIsMutable();
+          connections_.remove(index);
+          onChanged();
+        } else {
+          connectionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder getConnectionsBuilder(
+          int index) {
+        return getConnectionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder getConnectionsOrBuilder(
+          int index) {
+        if (connectionsBuilder_ == null) {
+          return connections_.get(index);  } else {
+          return connectionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder> 
+           getConnectionsOrBuilderList() {
+        if (connectionsBuilder_ != null) {
+          return connectionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(connections_);
+        }
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder addConnectionsBuilder() {
+        return getConnectionsFieldBuilder().addBuilder(
+            com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder addConnectionsBuilder(
+          int index) {
+        return getConnectionsFieldBuilder().addBuilder(
+            index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Connection connections = 4;</code>
+       */
+      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder> 
+           getConnectionsBuilderList() {
+        return getConnectionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder> 
+          getConnectionsFieldBuilder() {
+        if (connectionsBuilder_ == null) {
+          connectionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder>(
+                  connections_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          connections_ = null;
+        }
+        return connectionsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Cycle)
+    }
+
+    // @@protoc_insertion_point(class_scope:Cycle)
+    private static final com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle();
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Cycle>
+        PARSER = new com.google.protobuf.AbstractParser<Cycle>() {
+      @java.lang.Override
+      public Cycle parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Cycle(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Cycle> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Cycle> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ConnectionOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:Connection)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> 
+        getEdgesList();
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdges(int index);
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    int getEdgesCount();
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
+        getEdgesOrBuilderList();
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgesOrBuilder(
+        int index);
+
+    /**
+     * <code>int32 startVertex = 2;</code>
+     * @return The startVertex.
+     */
+    int getStartVertex();
+  }
+  /**
+   * Protobuf type {@code Connection}
+   */
+  public static final class Connection extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:Connection)
+      ConnectionOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use Connection.newBuilder() to construct.
+    private Connection(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private Connection() {
+      edges_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new Connection();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private Connection(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                edges_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              edges_.add(
+                  input.readMessage(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.parser(), extensionRegistry));
+              break;
+            }
+            case 16: {
+
+              startVertex_ = input.readInt32();
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          edges_ = java.util.Collections.unmodifiableList(edges_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Connection_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Connection_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder.class);
+    }
+
+    public static final int EDGES_FIELD_NUMBER = 1;
+    private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> edges_;
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> getEdgesList() {
+      return edges_;
+    }
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
+        getEdgesOrBuilderList() {
+      return edges_;
+    }
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public int getEdgesCount() {
+      return edges_.size();
+    }
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdges(int index) {
+      return edges_.get(index);
+    }
+    /**
+     * <code>repeated .Edge edges = 1;</code>
+     */
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgesOrBuilder(
+        int index) {
+      return edges_.get(index);
+    }
+
+    public static final int STARTVERTEX_FIELD_NUMBER = 2;
+    private int startVertex_;
+    /**
+     * <code>int32 startVertex = 2;</code>
+     * @return The startVertex.
+     */
+    @java.lang.Override
+    public int getStartVertex() {
+      return startVertex_;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < edges_.size(); i++) {
+        output.writeMessage(1, edges_.get(i));
+      }
+      if (startVertex_ != 0) {
+        output.writeInt32(2, startVertex_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < edges_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, edges_.get(i));
+      }
+      if (startVertex_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(2, startVertex_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection)) {
+        return super.equals(obj);
+      }
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection other = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection) obj;
+
+      if (!getEdgesList()
+          .equals(other.getEdgesList())) return false;
+      if (getStartVertex()
+          != other.getStartVertex()) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getEdgesCount() > 0) {
+        hash = (37 * hash) + EDGES_FIELD_NUMBER;
+        hash = (53 * hash) + getEdgesList().hashCode();
+      }
+      hash = (37 * hash) + STARTVERTEX_FIELD_NUMBER;
+      hash = (53 * hash) + getStartVertex();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code Connection}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:Connection)
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.ConnectionOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Connection_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Connection_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.Builder.class);
+      }
+
+      // Construct using com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getEdgesFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (edgesBuilder_ == null) {
+          edges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          edgesBuilder_.clear();
+        }
+        startVertex_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Connection_descriptor;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection getDefaultInstanceForType() {
+        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection build() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection buildPartial() {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection result = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection(this);
+        int from_bitField0_ = bitField0_;
+        if (edgesBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            edges_ = java.util.Collections.unmodifiableList(edges_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.edges_ = edges_;
+        } else {
+          result.edges_ = edgesBuilder_.build();
+        }
+        result.startVertex_ = startVertex_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection) {
+          return mergeFrom((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection other) {
+        if (other == com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection.getDefaultInstance()) return this;
+        if (edgesBuilder_ == null) {
+          if (!other.edges_.isEmpty()) {
+            if (edges_.isEmpty()) {
+              edges_ = other.edges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureEdgesIsMutable();
+              edges_.addAll(other.edges_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.edges_.isEmpty()) {
+            if (edgesBuilder_.isEmpty()) {
+              edgesBuilder_.dispose();
+              edgesBuilder_ = null;
+              edges_ = other.edges_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              edgesBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getEdgesFieldBuilder() : null;
+            } else {
+              edgesBuilder_.addAllMessages(other.edges_);
+            }
+          }
+        }
+        if (other.getStartVertex() != 0) {
+          setStartVertex(other.getStartVertex());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> edges_ =
+        java.util.Collections.emptyList();
+      private void ensureEdgesIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          edges_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge>(edges_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> edgesBuilder_;
+
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> getEdgesList() {
+        if (edgesBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(edges_);
+        } else {
+          return edgesBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public int getEdgesCount() {
+        if (edgesBuilder_ == null) {
+          return edges_.size();
+        } else {
+          return edgesBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge getEdges(int index) {
+        if (edgesBuilder_ == null) {
+          return edges_.get(index);
+        } else {
+          return edgesBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder setEdges(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
+        if (edgesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEdgesIsMutable();
+          edges_.set(index, value);
+          onChanged();
+        } else {
+          edgesBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder setEdges(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder builderForValue) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          edgesBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addEdges(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
+        if (edgesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEdgesIsMutable();
+          edges_.add(value);
+          onChanged();
+        } else {
+          edgesBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addEdges(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge value) {
+        if (edgesBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureEdgesIsMutable();
+          edges_.add(index, value);
+          onChanged();
+        } else {
+          edgesBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addEdges(
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder builderForValue) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.add(builderForValue.build());
+          onChanged();
+        } else {
+          edgesBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addEdges(
+          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder builderForValue) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          edgesBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder addAllEdges(
+          java.lang.Iterable<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge> values) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, edges_);
+          onChanged();
+        } else {
+          edgesBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder clearEdges() {
+        if (edgesBuilder_ == null) {
+          edges_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          edgesBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public Builder removeEdges(int index) {
+        if (edgesBuilder_ == null) {
+          ensureEdgesIsMutable();
+          edges_.remove(index);
+          onChanged();
+        } else {
+          edgesBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder getEdgesBuilder(
+          int index) {
+        return getEdgesFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder getEdgesOrBuilder(
+          int index) {
+        if (edgesBuilder_ == null) {
+          return edges_.get(index);  } else {
+          return edgesBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
+           getEdgesOrBuilderList() {
+        if (edgesBuilder_ != null) {
+          return edgesBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(edges_);
+        }
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder addEdgesBuilder() {
+        return getEdgesFieldBuilder().addBuilder(
+            com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder addEdgesBuilder(
+          int index) {
+        return getEdgesFieldBuilder().addBuilder(
+            index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .Edge edges = 1;</code>
+       */
+      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder> 
+           getEdgesBuilderList() {
+        return getEdgesFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder> 
+          getEdgesFieldBuilder() {
+        if (edgesBuilder_ == null) {
+          edgesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Edge.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.EdgeOrBuilder>(
+                  edges_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          edges_ = null;
+        }
+        return edgesBuilder_;
+      }
+
+      private int startVertex_ ;
+      /**
+       * <code>int32 startVertex = 2;</code>
+       * @return The startVertex.
+       */
+      @java.lang.Override
+      public int getStartVertex() {
+        return startVertex_;
+      }
+      /**
+       * <code>int32 startVertex = 2;</code>
+       * @param value The startVertex to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStartVertex(int value) {
+        
+        startVertex_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 startVertex = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStartVertex() {
+        
+        startVertex_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:Connection)
+    }
+
+    // @@protoc_insertion_point(class_scope:Connection)
+    private static final com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection();
+    }
+
+    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<Connection>
+        PARSER = new com.google.protobuf.AbstractParser<Connection>() {
+      @java.lang.Override
+      public Connection parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new Connection(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<Connection> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<Connection> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Connection getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1437,1434 +6814,46 @@ public final class HermesOuterClass {
 
   }
 
-  public interface CycleOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Cycle)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated int32 vertex = 1;</code>
-     * @return A list containing the vertex.
-     */
-    java.util.List<java.lang.Integer> getVertexList();
-    /**
-     * <code>repeated int32 vertex = 1;</code>
-     * @return The count of vertex.
-     */
-    int getVertexCount();
-    /**
-     * <code>repeated int32 vertex = 1;</code>
-     * @param index The index of the element to return.
-     * @return The vertex at the given index.
-     */
-    int getVertex(int index);
-  }
-  /**
-   * Protobuf type {@code Cycle}
-   */
-  public static final class Cycle extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Cycle)
-      CycleOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Cycle.newBuilder() to construct.
-    private Cycle(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Cycle() {
-      vertex_ = emptyIntList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Cycle();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Cycle(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                vertex_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              vertex_.addInt(input.readInt32());
-              break;
-            }
-            case 10: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
-                vertex_ = newIntList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              while (input.getBytesUntilLimit() > 0) {
-                vertex_.addInt(input.readInt32());
-              }
-              input.popLimit(limit);
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          vertex_.makeImmutable(); // C
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder.class);
-    }
-
-    public static final int VERTEX_FIELD_NUMBER = 1;
-    private com.google.protobuf.Internal.IntList vertex_;
-    /**
-     * <code>repeated int32 vertex = 1;</code>
-     * @return A list containing the vertex.
-     */
-    @java.lang.Override
-    public java.util.List<java.lang.Integer>
-        getVertexList() {
-      return vertex_;
-    }
-    /**
-     * <code>repeated int32 vertex = 1;</code>
-     * @return The count of vertex.
-     */
-    public int getVertexCount() {
-      return vertex_.size();
-    }
-    /**
-     * <code>repeated int32 vertex = 1;</code>
-     * @param index The index of the element to return.
-     * @return The vertex at the given index.
-     */
-    public int getVertex(int index) {
-      return vertex_.getInt(index);
-    }
-    private int vertexMemoizedSerializedSize = -1;
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (getVertexList().size() > 0) {
-        output.writeUInt32NoTag(10);
-        output.writeUInt32NoTag(vertexMemoizedSerializedSize);
-      }
-      for (int i = 0; i < vertex_.size(); i++) {
-        output.writeInt32NoTag(vertex_.getInt(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      {
-        int dataSize = 0;
-        for (int i = 0; i < vertex_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(vertex_.getInt(i));
-        }
-        size += dataSize;
-        if (!getVertexList().isEmpty()) {
-          size += 1;
-          size += com.google.protobuf.CodedOutputStream
-              .computeInt32SizeNoTag(dataSize);
-        }
-        vertexMemoizedSerializedSize = dataSize;
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle)) {
-        return super.equals(obj);
-      }
-      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle other = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle) obj;
-
-      if (!getVertexList()
-          .equals(other.getVertexList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getVertexCount() > 0) {
-        hash = (37 * hash) + VERTEX_FIELD_NUMBER;
-        hash = (53 * hash) + getVertexList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Cycle}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Cycle)
-        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder.class);
-      }
-
-      // Construct using com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        vertex_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycle_descriptor;
-      }
-
-      @java.lang.Override
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getDefaultInstanceForType() {
-        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle build() {
-        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle buildPartial() {
-        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle result = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle(this);
-        int from_bitField0_ = bitField0_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          vertex_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.vertex_ = vertex_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle) {
-          return mergeFrom((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle other) {
-        if (other == com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.getDefaultInstance()) return this;
-        if (!other.vertex_.isEmpty()) {
-          if (vertex_.isEmpty()) {
-            vertex_ = other.vertex_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureVertexIsMutable();
-            vertex_.addAll(other.vertex_);
-          }
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private com.google.protobuf.Internal.IntList vertex_ = emptyIntList();
-      private void ensureVertexIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          vertex_ = mutableCopy(vertex_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-      /**
-       * <code>repeated int32 vertex = 1;</code>
-       * @return A list containing the vertex.
-       */
-      public java.util.List<java.lang.Integer>
-          getVertexList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
-                 java.util.Collections.unmodifiableList(vertex_) : vertex_;
-      }
-      /**
-       * <code>repeated int32 vertex = 1;</code>
-       * @return The count of vertex.
-       */
-      public int getVertexCount() {
-        return vertex_.size();
-      }
-      /**
-       * <code>repeated int32 vertex = 1;</code>
-       * @param index The index of the element to return.
-       * @return The vertex at the given index.
-       */
-      public int getVertex(int index) {
-        return vertex_.getInt(index);
-      }
-      /**
-       * <code>repeated int32 vertex = 1;</code>
-       * @param index The index to set the value at.
-       * @param value The vertex to set.
-       * @return This builder for chaining.
-       */
-      public Builder setVertex(
-          int index, int value) {
-        ensureVertexIsMutable();
-        vertex_.setInt(index, value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int32 vertex = 1;</code>
-       * @param value The vertex to add.
-       * @return This builder for chaining.
-       */
-      public Builder addVertex(int value) {
-        ensureVertexIsMutable();
-        vertex_.addInt(value);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int32 vertex = 1;</code>
-       * @param values The vertex to add.
-       * @return This builder for chaining.
-       */
-      public Builder addAllVertex(
-          java.lang.Iterable<? extends java.lang.Integer> values) {
-        ensureVertexIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, vertex_);
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>repeated int32 vertex = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearVertex() {
-        vertex_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Cycle)
-    }
-
-    // @@protoc_insertion_point(class_scope:Cycle)
-    private static final com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle();
-    }
-
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Cycle>
-        PARSER = new com.google.protobuf.AbstractParser<Cycle>() {
-      @java.lang.Override
-      public Cycle parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Cycle(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Cycle> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Cycle> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface CyclesOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Cycles)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> 
-        getCycleList();
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getCycle(int index);
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    int getCycleCount();
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> 
-        getCycleOrBuilderList();
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder getCycleOrBuilder(
-        int index);
-  }
-  /**
-   * Protobuf type {@code Cycles}
-   */
-  public static final class Cycles extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Cycles)
-      CyclesOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Cycles.newBuilder() to construct.
-    private Cycles(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Cycles() {
-      cycle_ = java.util.Collections.emptyList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Cycles();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Cycles(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                cycle_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              cycle_.add(
-                  input.readMessage(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.parser(), extensionRegistry));
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        if (((mutable_bitField0_ & 0x00000001) != 0)) {
-          cycle_ = java.util.Collections.unmodifiableList(cycle_);
-        }
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycles_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycles_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles.Builder.class);
-    }
-
-    public static final int CYCLE_FIELD_NUMBER = 1;
-    private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> cycle_;
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    @java.lang.Override
-    public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> getCycleList() {
-      return cycle_;
-    }
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    @java.lang.Override
-    public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> 
-        getCycleOrBuilderList() {
-      return cycle_;
-    }
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    @java.lang.Override
-    public int getCycleCount() {
-      return cycle_.size();
-    }
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    @java.lang.Override
-    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getCycle(int index) {
-      return cycle_.get(index);
-    }
-    /**
-     * <code>repeated .Cycle cycle = 1;</code>
-     */
-    @java.lang.Override
-    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder getCycleOrBuilder(
-        int index) {
-      return cycle_.get(index);
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      for (int i = 0; i < cycle_.size(); i++) {
-        output.writeMessage(1, cycle_.get(i));
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      for (int i = 0; i < cycle_.size(); i++) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, cycle_.get(i));
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles)) {
-        return super.equals(obj);
-      }
-      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles other = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles) obj;
-
-      if (!getCycleList()
-          .equals(other.getCycleList())) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      if (getCycleCount() > 0) {
-        hash = (37 * hash) + CYCLE_FIELD_NUMBER;
-        hash = (53 * hash) + getCycleList().hashCode();
-      }
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Cycles}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Cycles)
-        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CyclesOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycles_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycles_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles.class, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles.Builder.class);
-      }
-
-      // Construct using com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-          getCycleFieldBuilder();
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        if (cycleBuilder_ == null) {
-          cycle_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        } else {
-          cycleBuilder_.clear();
-        }
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.internal_static_Cycles_descriptor;
-      }
-
-      @java.lang.Override
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles getDefaultInstanceForType() {
-        return com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles build() {
-        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles buildPartial() {
-        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles result = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles(this);
-        int from_bitField0_ = bitField0_;
-        if (cycleBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
-            cycle_ = java.util.Collections.unmodifiableList(cycle_);
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.cycle_ = cycle_;
-        } else {
-          result.cycle_ = cycleBuilder_.build();
-        }
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles) {
-          return mergeFrom((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles other) {
-        if (other == com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles.getDefaultInstance()) return this;
-        if (cycleBuilder_ == null) {
-          if (!other.cycle_.isEmpty()) {
-            if (cycle_.isEmpty()) {
-              cycle_ = other.cycle_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-            } else {
-              ensureCycleIsMutable();
-              cycle_.addAll(other.cycle_);
-            }
-            onChanged();
-          }
-        } else {
-          if (!other.cycle_.isEmpty()) {
-            if (cycleBuilder_.isEmpty()) {
-              cycleBuilder_.dispose();
-              cycleBuilder_ = null;
-              cycle_ = other.cycle_;
-              bitField0_ = (bitField0_ & ~0x00000001);
-              cycleBuilder_ = 
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                   getCycleFieldBuilder() : null;
-            } else {
-              cycleBuilder_.addAllMessages(other.cycle_);
-            }
-          }
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-      private int bitField0_;
-
-      private java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> cycle_ =
-        java.util.Collections.emptyList();
-      private void ensureCycleIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          cycle_ = new java.util.ArrayList<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle>(cycle_);
-          bitField0_ |= 0x00000001;
-         }
-      }
-
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> cycleBuilder_;
-
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> getCycleList() {
-        if (cycleBuilder_ == null) {
-          return java.util.Collections.unmodifiableList(cycle_);
-        } else {
-          return cycleBuilder_.getMessageList();
-        }
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public int getCycleCount() {
-        if (cycleBuilder_ == null) {
-          return cycle_.size();
-        } else {
-          return cycleBuilder_.getCount();
-        }
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle getCycle(int index) {
-        if (cycleBuilder_ == null) {
-          return cycle_.get(index);
-        } else {
-          return cycleBuilder_.getMessage(index);
-        }
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public Builder setCycle(
-          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle value) {
-        if (cycleBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCycleIsMutable();
-          cycle_.set(index, value);
-          onChanged();
-        } else {
-          cycleBuilder_.setMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public Builder setCycle(
-          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder builderForValue) {
-        if (cycleBuilder_ == null) {
-          ensureCycleIsMutable();
-          cycle_.set(index, builderForValue.build());
-          onChanged();
-        } else {
-          cycleBuilder_.setMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public Builder addCycle(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle value) {
-        if (cycleBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCycleIsMutable();
-          cycle_.add(value);
-          onChanged();
-        } else {
-          cycleBuilder_.addMessage(value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public Builder addCycle(
-          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle value) {
-        if (cycleBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          ensureCycleIsMutable();
-          cycle_.add(index, value);
-          onChanged();
-        } else {
-          cycleBuilder_.addMessage(index, value);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public Builder addCycle(
-          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder builderForValue) {
-        if (cycleBuilder_ == null) {
-          ensureCycleIsMutable();
-          cycle_.add(builderForValue.build());
-          onChanged();
-        } else {
-          cycleBuilder_.addMessage(builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public Builder addCycle(
-          int index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder builderForValue) {
-        if (cycleBuilder_ == null) {
-          ensureCycleIsMutable();
-          cycle_.add(index, builderForValue.build());
-          onChanged();
-        } else {
-          cycleBuilder_.addMessage(index, builderForValue.build());
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public Builder addAllCycle(
-          java.lang.Iterable<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle> values) {
-        if (cycleBuilder_ == null) {
-          ensureCycleIsMutable();
-          com.google.protobuf.AbstractMessageLite.Builder.addAll(
-              values, cycle_);
-          onChanged();
-        } else {
-          cycleBuilder_.addAllMessages(values);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public Builder clearCycle() {
-        if (cycleBuilder_ == null) {
-          cycle_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
-          onChanged();
-        } else {
-          cycleBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public Builder removeCycle(int index) {
-        if (cycleBuilder_ == null) {
-          ensureCycleIsMutable();
-          cycle_.remove(index);
-          onChanged();
-        } else {
-          cycleBuilder_.remove(index);
-        }
-        return this;
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder getCycleBuilder(
-          int index) {
-        return getCycleFieldBuilder().getBuilder(index);
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder getCycleOrBuilder(
-          int index) {
-        if (cycleBuilder_ == null) {
-          return cycle_.get(index);  } else {
-          return cycleBuilder_.getMessageOrBuilder(index);
-        }
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public java.util.List<? extends com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> 
-           getCycleOrBuilderList() {
-        if (cycleBuilder_ != null) {
-          return cycleBuilder_.getMessageOrBuilderList();
-        } else {
-          return java.util.Collections.unmodifiableList(cycle_);
-        }
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder addCycleBuilder() {
-        return getCycleFieldBuilder().addBuilder(
-            com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder addCycleBuilder(
-          int index) {
-        return getCycleFieldBuilder().addBuilder(
-            index, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.getDefaultInstance());
-      }
-      /**
-       * <code>repeated .Cycle cycle = 1;</code>
-       */
-      public java.util.List<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder> 
-           getCycleBuilderList() {
-        return getCycleFieldBuilder().getBuilderList();
-      }
-      private com.google.protobuf.RepeatedFieldBuilderV3<
-          com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder> 
-          getCycleFieldBuilder() {
-        if (cycleBuilder_ == null) {
-          cycleBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycle.Builder, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.CycleOrBuilder>(
-                  cycle_,
-                  ((bitField0_ & 0x00000001) != 0),
-                  getParentForChildren(),
-                  isClean());
-          cycle_ = null;
-        }
-        return cycleBuilder_;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Cycles)
-    }
-
-    // @@protoc_insertion_point(class_scope:Cycles)
-    private static final com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles();
-    }
-
-    public static com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Cycles>
-        PARSER = new com.google.protobuf.AbstractParser<Cycles>() {
-      @java.lang.Override
-      public Cycles parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Cycles(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Cycles> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Cycles> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.Cycles getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_HermesArbitrageRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_HermesArbitrageRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_SearchParams_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_SearchParams_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_StartVertices_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_StartVertices_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Graph_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Graph_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Edge_descriptor;
+    internal_static_HermesArbitrageResponse_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Edge_fieldAccessorTable;
+      internal_static_HermesArbitrageResponse_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Cycle_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_Cycle_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Cycles_descriptor;
+    internal_static_Connection_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Cycles_fieldAccessorTable;
+      internal_static_Connection_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Edge_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Edge_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2874,42 +6863,79 @@ public final class HermesOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014hermes.proto\"\034\n\005Graph\022\023\n\004edge\030\001 \003(\0132\005." +
-      "Edge\"@\n\004Edge\022\022\n\nvertexFrom\030\001 \001(\005\022\020\n\010vert" +
-      "exTo\030\002 \001(\005\022\022\n\nmultiplier\030\003 \001(\002\"\027\n\005Cycle\022" +
-      "\016\n\006vertex\030\001 \003(\005\"\037\n\006Cycles\022\025\n\005cycle\030\001 \003(\013" +
-      "2\006.Cycle2&\n\006Hermes\022\034\n\tarbitrate\022\006.Graph\032" +
-      "\007.CyclesB*\n(com.phoenix.common.grpc.herm" +
-      "es.generatedb\006proto3"
+      "\n\014hermes.proto\"{\n\026HermesArbitrageRequest" +
+      "\022\025\n\005graph\030\001 \001(\0132\006.Graph\022%\n\rstartVertices" +
+      "\030\002 \001(\0132\016.StartVertices\022#\n\014searchParams\030\003" +
+      " \001(\0132\r.SearchParams\"\200\001\n\014SearchParams\022\032\n\022" +
+      "minProfitAsPercent\030\001 \001(\002\022\032\n\022maxProfitAsP" +
+      "ercent\030\002 \001(\002\022\030\n\020componentMinSize\030\003 \001(\005\022\036" +
+      "\n\026numberOfRandomLaunches\030\004 \001(\005\"&\n\rStartV" +
+      "ertices\022\025\n\rstartVertices\030\001 \003(\005\"7\n\005Graph\022" +
+      "\024\n\005edges\030\001 \003(\0132\005.Edge\022\030\n\020numberOfVertice" +
+      "s\030\002 \001(\005\"1\n\027HermesArbitrageResponse\022\026\n\006cy" +
+      "cles\030\001 \003(\0132\006.Cycle\"k\n\005Cycle\022\024\n\005edges\030\001 \003" +
+      "(\0132\005.Edge\022\027\n\017profitAsPercent\030\002 \001(\002\022\021\n\tcy" +
+      "cleSize\030\003 \001(\005\022 \n\013connections\030\004 \003(\0132\013.Con" +
+      "nection\"7\n\nConnection\022\024\n\005edges\030\001 \003(\0132\005.E" +
+      "dge\022\023\n\013startVertex\030\002 \001(\005\"@\n\004Edge\022\022\n\nvert" +
+      "exFrom\030\001 \001(\005\022\020\n\010vertexTo\030\002 \001(\005\022\022\n\nmultip" +
+      "lier\030\003 \001(\0022H\n\006Hermes\022>\n\tarbitrate\022\027.Herm" +
+      "esArbitrageRequest\032\030.HermesArbitrageResp" +
+      "onseB*\n(com.phoenix.common.grpc.hermes.g" +
+      "eneratedb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_Graph_descriptor =
+    internal_static_HermesArbitrageRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_HermesArbitrageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_HermesArbitrageRequest_descriptor,
+        new java.lang.String[] { "Graph", "StartVertices", "SearchParams", });
+    internal_static_SearchParams_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_SearchParams_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_SearchParams_descriptor,
+        new java.lang.String[] { "MinProfitAsPercent", "MaxProfitAsPercent", "ComponentMinSize", "NumberOfRandomLaunches", });
+    internal_static_StartVertices_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_StartVertices_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_StartVertices_descriptor,
+        new java.lang.String[] { "StartVertices", });
+    internal_static_Graph_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_Graph_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Graph_descriptor,
-        new java.lang.String[] { "Edge", });
+        new java.lang.String[] { "Edges", "NumberOfVertices", });
+    internal_static_HermesArbitrageResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_HermesArbitrageResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_HermesArbitrageResponse_descriptor,
+        new java.lang.String[] { "Cycles", });
+    internal_static_Cycle_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_Cycle_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Cycle_descriptor,
+        new java.lang.String[] { "Edges", "ProfitAsPercent", "CycleSize", "Connections", });
+    internal_static_Connection_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_Connection_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Connection_descriptor,
+        new java.lang.String[] { "Edges", "StartVertex", });
     internal_static_Edge_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_Edge_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Edge_descriptor,
         new java.lang.String[] { "VertexFrom", "VertexTo", "Multiplier", });
-    internal_static_Cycle_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_Cycle_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Cycle_descriptor,
-        new java.lang.String[] { "Vertex", });
-    internal_static_Cycles_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_Cycles_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Cycles_descriptor,
-        new java.lang.String[] { "Cycle", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

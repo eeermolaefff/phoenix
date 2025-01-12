@@ -5,8 +5,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 
-import java.util.Objects;
-
 @UtilityClass
 public class Metrics {
 
@@ -32,13 +30,7 @@ public class Metrics {
 
     private static String getLogger(Thread currentThread) {
         StackTraceElement[] traces = currentThread.getStackTrace();
-        StackTraceElement trace = null;
-        if (traces.length > 16 && Objects.equals(traces[3].getFileName(), "LoggableAspect.java")) {
-            trace = traces[16];
-        } else if (traces.length > 3) {
-            trace = traces[3];
-        }
-
+        StackTraceElement trace = traces[3];
         return getIdentifier(trace);
     }
 
