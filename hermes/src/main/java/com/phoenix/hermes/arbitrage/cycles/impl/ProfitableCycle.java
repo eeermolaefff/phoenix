@@ -1,6 +1,5 @@
 package com.phoenix.hermes.arbitrage.cycles.impl;
 
-import com.phoenix.hermes.arbitrage.cycles.impl.interfaces.Cycle;
 import com.phoenix.hermes.arbitrage.graph.edges.interfaces.DirectedEdge;
 import lombok.Getter;
 
@@ -41,10 +40,5 @@ public class ProfitableCycle extends HashableCycle {
             currencyAmount = edge.goThrough(currencyAmount);
         }
         return jsonEdgesList;
-    }
-
-    @Override
-    public int compareTo(Cycle o) {
-        return 0;
     }
 }

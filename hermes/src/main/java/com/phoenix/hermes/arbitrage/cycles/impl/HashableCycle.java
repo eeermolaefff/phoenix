@@ -20,7 +20,7 @@ public abstract class HashableCycle extends BaseCycle {
     public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof HashableCycle another))
+        if (!(o instanceof HashableCycle another))  //TODO Проверить что все наследники тут не ломают
             return false;
         if (this.hashCode() != another.hashCode())
             return false;

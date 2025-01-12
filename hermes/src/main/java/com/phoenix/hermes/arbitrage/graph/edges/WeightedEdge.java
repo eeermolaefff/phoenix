@@ -23,14 +23,6 @@ public class WeightedEdge implements DirectedEdge {
     }
 
     @Override
-    public int compareTo(DirectedEdge edge) {
-        return Comparator.comparing(DirectedEdge::getVertexFrom)
-                .thenComparing(DirectedEdge::getVertexTo)
-                .thenComparing(DirectedEdge::getWeight)
-                .compare(this, edge);
-    }
-
-    @Override
     public double goThrough(double startCurrencyAmount) {
         return startCurrencyAmount * weight;
     }

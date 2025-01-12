@@ -3,6 +3,7 @@ package com.phoenix.hermes.arbitrage.cycles.processing;
 import com.phoenix.hermes.arbitrage.graph.edges.interfaces.DirectedEdge;
 import com.phoenix.hermes.arbitrage.graph.impl.ArrayBasedDigraph;
 import com.phoenix.hermes.arbitrage.graph.impl.interfaces.WeightedDigraph;
+import lombok.Getter;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -14,10 +15,14 @@ public class Arbitrage {
     private final double[] distTo;
     private final boolean[] isInTheQueue;
     private final Queue<Integer> workingQueue;
+    @Getter
     private final double additionalCommission;
+    @Getter
     private final int startVertex;
+    @Getter
     private final int numberOfVertices;
 
+    @Getter
     private List<DirectedEdge> cycle;
     private int numberOfIterations = 0;
 
@@ -42,10 +47,6 @@ public class Arbitrage {
         }
     }
 
-    public int getNumberOfVertices() {
-        return numberOfVertices;
-    }
-
     public double getDistanceTo(int destinationVertex) {
         return distTo[destinationVertex];
     }
@@ -60,14 +61,6 @@ public class Arbitrage {
         return destAmount;
     }
 
-    public double getAdditionalCommission() {
-        return additionalCommission;
-    }
-
-    public int getStartVertex() {
-        return startVertex;
-    }
-
     public boolean hasPathTo(int dest) {
         return distTo[dest] != 0;
     }
@@ -80,10 +73,6 @@ public class Arbitrage {
         for (DirectedEdge e = edgeTo[dest]; e != null; e = edgeTo[e.getVertexFrom()])
             path.addFirst(e);
         return path;
-    }
-
-    public List<DirectedEdge> getCycle() {
-        return cycle;
     }
 
     public boolean hasCycle() {

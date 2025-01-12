@@ -2,6 +2,7 @@ package com.phoenix.hermes.arbitrage.graph.processing;
 
 import com.phoenix.hermes.arbitrage.graph.edges.interfaces.DirectedEdge;
 import com.phoenix.hermes.arbitrage.graph.impl.interfaces.WeightedDigraph;
+import lombok.Getter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +11,7 @@ public class Connectivity {
 
     private final boolean[] marked;
     private final int[] componentIds;
+    @Getter
     private int numberOfComponents;
 
     public Connectivity(WeightedDigraph digraph) {
@@ -33,10 +35,6 @@ public class Connectivity {
 
     public int getComponentIdByVertex(int vertex) {
         return componentIds[vertex];
-    }
-
-    public int getNumberOfComponents() {
-        return numberOfComponents;
     }
 
     public Iterable<Integer> getComponentByVertex(int vertex) {
