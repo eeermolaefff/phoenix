@@ -6,7 +6,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.38.0)",
-    comments = "Source: hermes.proto")
+    comments = "Source: hermes/hermes.proto")
 public final class HermesGrpc {
 
   private HermesGrpc() {}
@@ -14,35 +14,66 @@ public final class HermesGrpc {
   public static final String SERVICE_NAME = "Hermes";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest,
-      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> getArbitrateMethod;
+  private static volatile io.grpc.MethodDescriptor<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1,
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> getArbitrateV1Method;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "arbitrate",
-      requestType = com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest.class,
+      fullMethodName = SERVICE_NAME + '/' + "arbitrateV1",
+      requestType = com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1.class,
       responseType = com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest,
-      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> getArbitrateMethod() {
-    io.grpc.MethodDescriptor<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> getArbitrateMethod;
-    if ((getArbitrateMethod = HermesGrpc.getArbitrateMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1,
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> getArbitrateV1Method() {
+    io.grpc.MethodDescriptor<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> getArbitrateV1Method;
+    if ((getArbitrateV1Method = HermesGrpc.getArbitrateV1Method) == null) {
       synchronized (HermesGrpc.class) {
-        if ((getArbitrateMethod = HermesGrpc.getArbitrateMethod) == null) {
-          HermesGrpc.getArbitrateMethod = getArbitrateMethod =
-              io.grpc.MethodDescriptor.<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse>newBuilder()
+        if ((getArbitrateV1Method = HermesGrpc.getArbitrateV1Method) == null) {
+          HermesGrpc.getArbitrateV1Method = getArbitrateV1Method =
+              io.grpc.MethodDescriptor.<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "arbitrate"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "arbitrateV1"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest.getDefaultInstance()))
+                  com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new HermesMethodDescriptorSupplier("arbitrate"))
+              .setSchemaDescriptor(new HermesMethodDescriptorSupplier("arbitrateV1"))
               .build();
         }
       }
     }
-    return getArbitrateMethod;
+    return getArbitrateV1Method;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2,
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> getArbitrateV2Method;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "arbitrateV2",
+      requestType = com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2.class,
+      responseType = com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2,
+      com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> getArbitrateV2Method() {
+    io.grpc.MethodDescriptor<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> getArbitrateV2Method;
+    if ((getArbitrateV2Method = HermesGrpc.getArbitrateV2Method) == null) {
+      synchronized (HermesGrpc.class) {
+        if ((getArbitrateV2Method = HermesGrpc.getArbitrateV2Method) == null) {
+          HermesGrpc.getArbitrateV2Method = getArbitrateV2Method =
+              io.grpc.MethodDescriptor.<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2, com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "arbitrateV2"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new HermesMethodDescriptorSupplier("arbitrateV2"))
+              .build();
+        }
+      }
+    }
+    return getArbitrateV2Method;
   }
 
   /**
@@ -95,20 +126,34 @@ public final class HermesGrpc {
 
     /**
      */
-    public void arbitrate(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest request,
+    public void arbitrateV1(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1 request,
         io.grpc.stub.StreamObserver<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArbitrateMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArbitrateV1Method(), responseObserver);
+    }
+
+    /**
+     */
+    public void arbitrateV2(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2 request,
+        io.grpc.stub.StreamObserver<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getArbitrateV2Method(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
-            getArbitrateMethod(),
+            getArbitrateV1Method(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest,
+                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1,
                 com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse>(
-                  this, METHODID_ARBITRATE)))
+                  this, METHODID_ARBITRATE_V1)))
+          .addMethod(
+            getArbitrateV2Method(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2,
+                com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse>(
+                  this, METHODID_ARBITRATE_V2)))
           .build();
     }
   }
@@ -129,10 +174,18 @@ public final class HermesGrpc {
 
     /**
      */
-    public void arbitrate(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest request,
+    public void arbitrateV1(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1 request,
         io.grpc.stub.StreamObserver<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getArbitrateMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getArbitrateV1Method(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void arbitrateV2(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2 request,
+        io.grpc.stub.StreamObserver<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getArbitrateV2Method(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -152,9 +205,16 @@ public final class HermesGrpc {
 
     /**
      */
-    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse arbitrate(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest request) {
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse arbitrateV1(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1 request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getArbitrateMethod(), getCallOptions(), request);
+          getChannel(), getArbitrateV1Method(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse arbitrateV2(com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2 request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getArbitrateV2Method(), getCallOptions(), request);
     }
   }
 
@@ -174,14 +234,23 @@ public final class HermesGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> arbitrate(
-        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> arbitrateV1(
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1 request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getArbitrateMethod(), getCallOptions()), request);
+          getChannel().newCall(getArbitrateV1Method(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse> arbitrateV2(
+        com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2 request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getArbitrateV2Method(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_ARBITRATE = 0;
+  private static final int METHODID_ARBITRATE_V1 = 0;
+  private static final int METHODID_ARBITRATE_V2 = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -200,8 +269,12 @@ public final class HermesGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_ARBITRATE:
-          serviceImpl.arbitrate((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequest) request,
+        case METHODID_ARBITRATE_V1:
+          serviceImpl.arbitrateV1((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV1) request,
+              (io.grpc.stub.StreamObserver<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse>) responseObserver);
+          break;
+        case METHODID_ARBITRATE_V2:
+          serviceImpl.arbitrateV2((com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageRequestV2) request,
               (io.grpc.stub.StreamObserver<com.phoenix.common.grpc.hermes.generated.HermesOuterClass.HermesArbitrageResponse>) responseObserver);
           break;
         default:
@@ -265,7 +338,8 @@ public final class HermesGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new HermesFileDescriptorSupplier())
-              .addMethod(getArbitrateMethod())
+              .addMethod(getArbitrateV1Method())
+              .addMethod(getArbitrateV2Method())
               .build();
         }
       }

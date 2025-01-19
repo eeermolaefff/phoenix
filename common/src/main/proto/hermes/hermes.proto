@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+option java_package = "com.phoenix.common.grpc.hermes.generated";
+
+service Hermes {
+  rpc arbitrateV1(HermesArbitrageRequestV1) returns (HermesArbitrageResponse);
+  rpc arbitrateV2(HermesArbitrageRequestV2) returns (HermesArbitrageResponse);
+}
+
+message HermesArbitrageRequestV1 {
+  Graph graph = 1;
+  FilterParams filterParams = 2;
+  RequestParamsV1 requestParams = 3;
+}
+
+message HermesArbitrageRequestV2 {
+  Graph graph = 1;
+  FilterParams filterParams = 2;
+  RequestParamsV2 requestParams = 3;
+}
+
+message RequestParamsV1 {
+  repeated int32 startVertices = 1;
+  int32 numberOfRandomLaunches = 2;
+}
+
+message RequestParamsV2 {
+  int32 startVertex = 1;
+  repeated int32 verticesToConnect = 2;
+}
+
+message HermesArbitrageResponse {
+  repeated Cycle cycles = 1;
+}
+
+message FilterParams {
+  float minProfitAsPercent = 1;
+  float maxProfitAsPercent = 2;
+  int32 componentMinSize = 3;
+}
+
+message Graph {
+  repeated Edge edges = 1;
+  int32 numberOfVertices = 2;
+}
+
+message Cycle {
+  repeated Edge edges = 1;
+  float profitAsPercent = 2;
+  int32 cycleSize = 3;
+  repeated Connection connections = 4;
+}
+
+message Connection {
+  repeated Edge edges = 1;
+  int32 startVertex = 2;
+}
+
+message Edge {
+  int32 vertexFrom = 1;
+  int32 vertexTo = 2;
+  float multiplier = 3;
+}
